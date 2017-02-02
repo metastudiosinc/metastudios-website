@@ -22484,6 +22484,18 @@ var _bannerReact = require('./banner.react.js');
 
 var _bannerReact2 = _interopRequireDefault(_bannerReact);
 
+var _SkillsReact = require('./Skills.react.js');
+
+var _SkillsReact2 = _interopRequireDefault(_SkillsReact);
+
+var _connectReact = require('./connect.react.js');
+
+var _connectReact2 = _interopRequireDefault(_connectReact);
+
+var _footerReact = require('./footer.react.js');
+
+var _footerReact2 = _interopRequireDefault(_footerReact);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var React = require('react');
@@ -22526,12 +22538,10 @@ var Application = React.createClass({
     return React.createElement(
       'div',
       { className: 'container-fluid' },
-      React.createElement('banner', null),
-      React.createElement(
-        'center',
-        null,
-        React.createElement(Header, { text: 'Hello, homie' })
-      )
+      (0, _bannerReact2.default)(),
+      React.createElement(_SkillsReact2.default, null),
+      (0, _connectReact2.default)(),
+      (0, _footerReact2.default)()
     );
   }
 
@@ -22549,7 +22559,7 @@ var Application = React.createClass({
 
 module.exports = Application;
 
-},{"./Header.react":277,"./banner.react.js":278,"react":274}],277:[function(require,module,exports){
+},{"./Header.react":277,"./Skills.react.js":278,"./banner.react.js":279,"./connect.react.js":280,"./footer.react.js":281,"react":274}],277:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -22585,6 +22595,183 @@ module.exports = Header;
 },{"react":274}],278:[function(require,module,exports){
 "use strict";
 
+var _Row = require("react-bootstrap/lib/Row");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Col = require("react-bootstrap/lib/Col");
+
+var _Col2 = _interopRequireDefault(_Col);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var React = require('react');
+
+
+var textStyle = {
+  width: "100%",
+  height: "auto",
+  textAlight: "right",
+  direction: 'rtl',
+  margin: '8px'
+};
+
+var flexed = {
+  display: 'inline-flex'
+};
+
+var Skills = React.createClass({
+  displayName: "Skills",
+
+
+  //default API ----------------
+
+  //getDefaultProps: function(){
+  //    return null;
+  //},
+
+  //getInitialState: function() {},
+  //
+  //componentWillMount: function(){},
+  //
+  //componentDidMount: function(){},
+  //
+  //componentWillReceiveProps: function(){},
+
+  //shouldComponentUpdate: function(){},
+
+  //componentWillUpdate: function(){},
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        _Row2.default,
+        null,
+        React.createElement(
+          _Col2.default,
+          { xs: 12, lgHidden: true, mdHidden: true },
+          React.createElement(
+            _Col2.default,
+            { xs: 12, className: "pull-right" },
+            React.createElement(
+              "h2",
+              { className: "pull-right" },
+              "Meta Studios Inc"
+            )
+          ),
+          React.createElement(
+            "div",
+            { style: textStyle },
+            React.createElement(
+              _Col2.default,
+              { xs: 11, className: "pull-right", style: flexed },
+              React.createElement(
+                "h3",
+                null,
+                "combining new tech, clever strategy, and intuitive UI ",
+                React.createElement("br", null),
+                React.createElement(
+                  "strong",
+                  null,
+                  "We are creators"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { xs: 11, className: "pull-right", style: flexed },
+              React.createElement(
+                "h3",
+                null,
+                "building unique data visualization software solutions",
+                React.createElement("br", null),
+                " ",
+                React.createElement(
+                  "strong",
+                  null,
+                  "We are developers"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { xs: 11, className: "pull-right", style: flexed },
+              " ",
+              React.createElement(
+                "h3",
+                null,
+                "transforming data into insights ",
+                React.createElement("br", null),
+                React.createElement(
+                  "strong",
+                  null,
+                  "We are storytellers"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { xs: 11, className: "pull-right", style: flexed },
+              React.createElement(
+                "h3",
+                null,
+                "putting the cookies on the bottom shelf ",
+                React.createElement("br", null),
+                React.createElement(
+                  "strong",
+                  null,
+                  "We are rebels and scruffy looking nerf herders"
+                )
+              )
+            )
+          )
+        )
+      ),
+      React.createElement(
+        _Row2.default,
+        null,
+        React.createElement(
+          "div",
+          null,
+          "We Love Visualization Cloud Computing Analysis Brand Coaching"
+        )
+      ),
+      React.createElement(
+        _Row2.default,
+        null,
+        React.createElement(
+          "div",
+          null,
+          "Tech We Use explore with us"
+        )
+      ),
+      React.createElement(
+        _Row2.default,
+        null,
+        React.createElement(
+          _Col2.default,
+          { md: 12, smHidden: true, xsHidden: true },
+          "Larger Screen data visualization"
+        )
+      )
+    );
+  }
+
+  //,
+
+  //componentDidUpdate: function(){},
+  //
+  //componentWillUnmount: function(){}
+
+});
+
+module.exports = Skills;
+
+},{"react":274,"react-bootstrap/lib/Col":115,"react-bootstrap/lib/Row":116}],279:[function(require,module,exports){
+"use strict";
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -22603,20 +22790,17 @@ var _Col2 = _interopRequireDefault(_Col);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
-
-var bannerImgSrc = "/img/bannerImage.png";
-
-var banner = function banner(_ref) {
-  _objectDestructuringEmpty(_ref);
-
+var imgStyle = {
+  width: "100%"
+};
+var banner = function banner(title) {
   return _react2.default.createElement(
     _Row2.default,
     null,
     _react2.default.createElement(
       _Col2.default,
       { xs: 12 },
-      _react2.default.createElement("img", { src: bannerImgSrc })
+      _react2.default.createElement("img", { src: "/img/bannerImage.png", style: imgStyle })
     )
   );
 };
@@ -22627,4 +22811,98 @@ banner.propTypes = {
 
 exports.default = banner;
 
-},{"react":274,"react-bootstrap/lib/Col":115,"react-bootstrap/lib/Row":116}]},{},[275]);
+},{"react":274,"react-bootstrap/lib/Col":115,"react-bootstrap/lib/Row":116}],280:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Row = require("react-bootstrap/lib/Row");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Col = require("react-bootstrap/lib/Col");
+
+var _Col2 = _interopRequireDefault(_Col);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var connect = function connect() {
+  return _react2.default.createElement(
+    _Row2.default,
+    null,
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Connect with us"
+    ),
+    _react2.default.createElement(
+      "span",
+      null,
+      "Facebook"
+    ),
+    _react2.default.createElement(
+      "span",
+      null,
+      "Twitter"
+    ),
+    _react2.default.createElement(
+      "span",
+      null,
+      "Email"
+    ),
+    _react2.default.createElement(
+      "span",
+      null,
+      "LinkedIn"
+    )
+  );
+};
+
+exports.default = connect;
+
+},{"react":274,"react-bootstrap/lib/Col":115,"react-bootstrap/lib/Row":116}],281:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Row = require("react-bootstrap/lib/Row");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var footer = function footer() {
+  return _react2.default.createElement(
+    _Row2.default,
+    null,
+    _react2.default.createElement(
+      "center",
+      null,
+      _react2.default.createElement(
+        "h2",
+        null,
+        _react2.default.createElement(
+          "a",
+          { href: "http://metastudiosinc.com", style: { textDecoration: "none", color: "#333" } },
+          "Meta Studios Inc 2017"
+        )
+      )
+    )
+  );
+};
+
+exports.default = footer;
+
+},{"react":274,"react-bootstrap/lib/Row":116}]},{},[275]);
