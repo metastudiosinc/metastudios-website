@@ -1,6 +1,6 @@
 var React = require('react');
 var Header = require('./Header.react');
-
+import banner from "./banner.react.js"
 
 var Application = React.createClass({
 
@@ -35,6 +35,7 @@ var Application = React.createClass({
   render: function() {
     return (
       <div className="container-fluid">
+        <banner />
         <center>
           <Header text="Hello, homie"/>
         </center>
