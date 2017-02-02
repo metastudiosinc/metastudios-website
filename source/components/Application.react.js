@@ -35,7 +35,7 @@ var Application = React.createClass({
   render: function() {
     return (
       <div className="container-fluid">
-        <banner />
+        {banner}
         <center>
           <Header text="Hello, homie"/>
         </center>
