@@ -6,8 +6,8 @@ const imgStyle = {
   width:"100%"
 }
 const banner = (title) => (
-  <Row>
-    <Col xs={12}>
+  <Row style={{margin:'0px',padding:'0px'}}>
+    <Col xs={12} style={{margin:'0px',padding:'0px'}}>
       <img src="/img/bannerImage.png" style={imgStyle}/>
     </Col>
   </Row>

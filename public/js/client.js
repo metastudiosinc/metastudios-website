@@ -22537,7 +22537,7 @@ var Application = React.createClass({
   render: function render() {
     return React.createElement(
       'div',
-      { className: 'container-fluid' },
+      { className: 'container-fluid', style: { margin: '0px', padding: '0px' } },
       (0, _bannerReact2.default)(),
       React.createElement(_SkillsReact2.default, null),
       (0, _connectReact2.default)(),
@@ -22618,6 +22618,12 @@ var textStyle = {
 
 var flexed = {
   display: 'inline-flex'
+};
+
+var imgStyle = {
+  maxWidth: "20%",
+  margin: "10px",
+  maxHeight: "100px"
 };
 
 var Skills = React.createClass({
@@ -22733,18 +22739,55 @@ var Skills = React.createClass({
         _Row2.default,
         null,
         React.createElement(
-          "div",
-          null,
-          "We Love Visualization Cloud Computing Analysis Brand Coaching"
+          _Col2.default,
+          { md: 12, lgHidden: true, mdHidden: true },
+          React.createElement(
+            "div",
+            null,
+            "We Love Visualization Cloud Computing Analysis Brand Coaching"
+          )
         )
       ),
       React.createElement(
         _Row2.default,
         null,
         React.createElement(
-          "div",
-          null,
-          "Tech We Use explore with us"
+          _Col2.default,
+          { md: 12, lgHidden: true, mdHidden: true },
+          React.createElement(
+            "h2",
+            null,
+            "Tech We Use"
+          ),
+          React.createElement(
+            "h4",
+            null,
+            "explore with us"
+          ),
+          React.createElement(
+            "div",
+            { style: { diplay: 'inline-flex' } },
+            React.createElement(
+              "a",
+              { href: "http://spark.apache.org/" },
+              React.createElement("img", { src: "./img/spark.png", style: imgStyle })
+            ),
+            React.createElement(
+              "a",
+              { href: "https://facebook.github.io/react/" },
+              React.createElement("img", { src: "./img/react.png", style: imgStyle })
+            ),
+            React.createElement(
+              "a",
+              { href: "https://nodejs.org/en/" },
+              React.createElement("img", { src: "./img/nodejs.png", style: imgStyle })
+            ),
+            React.createElement(
+              "a",
+              { href: "https://slack.com/" },
+              React.createElement("img", { src: "./img/slack.png", style: imgStyle })
+            )
+          )
         )
       ),
       React.createElement(
@@ -22796,10 +22839,10 @@ var imgStyle = {
 var banner = function banner(title) {
   return _react2.default.createElement(
     _Row2.default,
-    null,
+    { style: { margin: '0px', padding: '0px' } },
     _react2.default.createElement(
       _Col2.default,
-      { xs: 12 },
+      { xs: 12, style: { margin: '0px', padding: '0px' } },
       _react2.default.createElement("img", { src: "/img/bannerImage.png", style: imgStyle })
     )
   );
@@ -22844,22 +22887,22 @@ var connect = function connect() {
     _react2.default.createElement(
       "span",
       null,
-      "Facebook"
+      _react2.default.createElement("img", { src: "" })
     ),
     _react2.default.createElement(
       "span",
       null,
-      "Twitter"
+      _react2.default.createElement("img", { src: "" })
     ),
     _react2.default.createElement(
       "span",
       null,
-      "Email"
+      _react2.default.createElement("img", { src: "" })
     ),
     _react2.default.createElement(
       "span",
       null,
-      "LinkedIn"
+      _react2.default.createElement("img", { src: "" })
     )
   );
 };

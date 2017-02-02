@@ -15,6 +15,12 @@ const flexed = {
   display:'inline-flex'
 }
 
+const imgStyle = {
+  maxWidth:"20%",
+  margin:"10px",
+  maxHeight:"100px"
+}
+
 
 var Skills = React.createClass({
 
@@ -53,6 +59,7 @@ var Skills = React.createClass({
         </Row>
 
         <Row>
+          <Col md={12} lgHidden mdHidden>
           <div>
             We Love
 
@@ -65,14 +72,22 @@ var Skills = React.createClass({
               Brand Coaching
 
           </div>
+        </Col>
         </Row>
 
         <Row>
-          <div>
-            Tech We Use
-            explore with us
+          <Col md={12} lgHidden mdHidden>
+          <h2>Tech We Use</h2>
+          <h4>explore with us</h4>
+          <div style={{diplay:'inline-flex'}}>
+
+            <a href="http://spark.apache.org/" ><img src='./img/spark.png' style={imgStyle}/></a>
+            <a href="https://facebook.github.io/react/" ><img src='./img/react.png' style={imgStyle}/></a>
+            <a href="https://nodejs.org/en/" ><img src='./img/nodejs.png' style={imgStyle}/></a>
+            <a href="https://slack.com/" ><img src='./img/slack.png' style={imgStyle}/></a>
 
           </div>
+        </Col>
 
 
       </Row>

@@ -5,10 +5,10 @@ import Col from "react-bootstrap/lib/Col"
 const connect = () => (
   <Row>
     <h2>Connect with us</h2>
-    <span>Facebook</span>
-    <span>Twitter</span>
-    <span>Email</span>
-    <span>LinkedIn</span>
+    <span><img src="" /></span>
+    <span><img src="" /></span>
+    <span><img src="" /></span>
+    <span><img src="" /></span>
   </Row>
 );
 
