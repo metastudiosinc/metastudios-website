@@ -1,0 +1,217 @@
+{
+  "nodes": {
+    "0": {
+      "nodes": [{
+          "id": 1,
+          "text": "Strategy",
+          "color": "#389DBE"
+        },
+        {
+          "id": 2,
+          "text": "Design",
+          "color": "#024873"
+        },
+        {
+          "id": 3,
+          "text": "Code",
+          "color": "#65D1E4"
+        }
+      ]
+    },
+
+    "1": {
+      "nodes": [{
+          "id": 11,
+          "text": "Cloud Computing",
+          "color": "#007069"
+        },
+        {
+          "id": 12,
+          "text": "Web Development",
+          "color": "#007069"
+        },
+
+        {
+          "id": 14,
+          "text": "Design Thinking",
+          "color": "#E07141"
+        },
+        {
+          "id": 15,
+          "text": "Graphic Design",
+          "color": "#E8B124"
+        },
+        {
+          "id": 16,
+          "text": "UX Design",
+          "color": "#E07141"
+        },
+
+
+      ]
+    },
+    "2": {
+      "nodes": [{
+          "id": 21,
+          "text": "Apache Spark",
+          "color": "#007069"
+        }, {
+          "id": 27,
+          "text": "Python",
+          "color": "#007069"
+        },
+        {
+          "id": 22,
+          "text": "React.js",
+          "color": "#007069"
+        },
+        {
+          "id": 23,
+          "text": "Node.js",
+          "color": "#007069"
+        },
+
+        {
+          "id": 24,
+          "text": "Elastic Search",
+          "color": "#007069"
+        },
+        {
+          "id": 25,
+          "text": "MongoDB",
+          "color": "#007069"
+        },
+
+        {
+          "id": 28,
+          "text": "Javascript",
+          "color": "#007069"
+        }, {
+          "id": 34,
+          "text": "Marketing",
+          "color": "#E8B124"
+        }, {
+          "id": 33,
+          "text": "Brand Hacking",
+          "color": "#E07141"
+        }, {
+          "id": 30,
+          "text": "Illustrator",
+          "color": "#E07141"
+        },
+
+
+        {
+          "id": 31,
+          "text": "InDesign",
+          "color": "#E07141"
+        },
+        {
+          "id": 32,
+          "text": "Adobe XD",
+          "color": "#E07141"
+        },
+        {
+          "id": 29,
+          "text": "Sketch",
+          "color": "#E07141"
+        },
+
+        {
+          "id": 36,
+          "text": "Data Analysis",
+          "color": "#00A79D"
+        },
+        {
+          "id": 37,
+          "text": "Analytics",
+          "color": "#00A79D"
+        }
+      ]
+    }
+  },
+  "links": [
+    {"from": 14,"to": 34},
+    {"from": 14,"to": 33},
+    {"from": 15,"to": 31},
+    {"from": 15,"to": 30},
+    {"from": 16,"to": 32},
+    {"from": 16,"to": 29},
+
+
+    {"from": 3,"to": 1},
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 11,
+      "to": 3
+    },
+    {
+      "from": 12,
+      "to": 3
+    },
+    {
+      "from": 14,
+      "to": 1
+    },
+    {
+      "from": 14,
+      "to": 2
+    },
+    {
+      "from": 15,
+      "to": 2
+    },
+    {
+      "from": 16,
+      "to": 2
+    },
+
+    {
+      "from": 11,
+      "to": 36
+    },
+    {
+      "from": 11,
+      "to": 37
+    },
+    {
+      "from": 11,
+      "to": 21
+    },
+    {
+      "from": 11,
+      "to": 27
+    },
+    {
+      "from": 12,
+      "to": 22
+    },
+    {
+      "from": 12,
+      "to": 23
+    },
+    {
+      "from": 12,
+      "to": 24
+    },
+    {
+      "from": 12,
+      "to": 25
+    },
+    {
+      "from": 12,
+      "to": 28
+    },
+
+
+
+
+  ]
+}

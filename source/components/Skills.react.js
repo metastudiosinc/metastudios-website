@@ -1,6 +1,8 @@
 var React = require('react');
 import Row from "react-bootstrap/lib/Row"
 import Col from "react-bootstrap/lib/Col"
+import SVGgraph from "./SVGgraph.react.js"
+import Dimensions from 'react-dimensions'
 
 
 const textStyle ={
@@ -94,7 +96,10 @@ var Skills = React.createClass({
 
       <Row>
         <Col md={12} smHidden xsHidden>
-          Larger Screen data visualization
+          <SVGgraph
+              containerWidth={this.props.containerWidth}
+              containerHeight={this.props.containerHeight}
+            />
         </Col>
       </Row>
     </div>
@@ -114,4 +119,4 @@ var Skills = React.createClass({
 
 });
 
-module.exports = Skills;
+module.exports = Dimensions()(Skills);

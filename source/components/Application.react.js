@@ -39,8 +39,8 @@ var Application = React.createClass({
     return (
       <div className="container-fluid" style={{margin:'0px',padding:'0px'}}>
         {banner()}
-        <Skills />
         {connect()}
+        <Skills />
         {footer()}
       </div>
     );
