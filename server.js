@@ -7,8 +7,8 @@ var ReactDOMServer = require('react-dom/server');
 var App = require('./source/Components/Application.react.js');
 
 //local host only example
-var ip_addr = '127.0.0.1';
-var port = '3000';
+#var ip_addr = '127.0.0.1';
+var port = '80';
 
 var server = function() {
 
@@ -18,13 +18,13 @@ var server = function() {
 
   self.setupVariables = function() {
     //  Set the environment variables we need.
-    self.ipaddress = ip_addr || '127.0.0.1';
+    #self.ipaddress = ip_addr || '127.0.0.1';
     self.port = port || 8080;
 
-    if (typeof self.ipaddress === "undefined") {
-      console.warn('No IP var, using 127.0.0.1');
-      self.ipaddress = "127.0.0.1";
-    }
+    #if (typeof self.ipaddress === "undefined") {
+    #  console.warn('No IP var, using 127.0.0.1');
+    #  self.ipaddress = "127.0.0.1";
+    #}
   };
 
 
@@ -148,9 +148,9 @@ var server = function() {
    */
   self.start = function() {
     //  Start the app on the specific interface (and port).
-    self.app.listen(self.port, self.ipaddress, function() {
-      console.log('%s: Node server started on %s:%d ...',
-        Date(Date.now()), self.ipaddress, self.port);
+    self.app.listen(self.port, function() {
+      console.log('%s: Node server started on %d ...',
+        Date(Date.now()),  self.port);
     });
   };
 
