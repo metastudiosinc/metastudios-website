@@ -1,6 +1,9 @@
 var React = require('react');
 var Header = require('./Header.react');
-
+import banner from "./banner.react.js"
+import Skills from "./Skills.react.js"
+import connect from "./connect.react.js"
+import footer from "./footer.react.js"
 
 var Application = React.createClass({
 
@@ -34,10 +37,11 @@ var Application = React.createClass({
 
   render: function() {
     return (
-      <div className="container-fluid">
-        <center>
-          <Header text="Hello, homie"/>
-        </center>
+      <div className="container-fluid" style={{margin:'0px',padding:'0px'}}>
+        {banner()}
+        {connect()}
+        <Skills />
+        {footer()}
       </div>
     );
 
