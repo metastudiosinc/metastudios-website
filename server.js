@@ -4,10 +4,9 @@ var express = require('express');
 var fs = require('fs');
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
-var App = require('./source/Components/Application.react.js');
+var App = require('./source/components/Application.react.js');
 
 //local host only example
-#var ip_addr = '127.0.0.1';
 var port = '80';
 
 var server = function() {
@@ -18,13 +17,8 @@ var server = function() {
 
   self.setupVariables = function() {
     //  Set the environment variables we need.
-    #self.ipaddress = ip_addr || '127.0.0.1';
     self.port = port || 8080;
 
-    #if (typeof self.ipaddress === "undefined") {
-    #  console.warn('No IP var, using 127.0.0.1');
-    #  self.ipaddress = "127.0.0.1";
-    #}
   };
 
 
