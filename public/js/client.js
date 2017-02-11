@@ -22793,12 +22793,12 @@ module.exports={
         {
           "id": 2,
           "text": "Design",
-          "color": "#024873"
+          "color": "#389DBE"
         },
         {
           "id": 3,
           "text": "Code",
-          "color": "#65D1E4"
+          "color": "#389DBE"
         }
       ]
     },
@@ -22807,28 +22807,28 @@ module.exports={
       "nodes": [{
           "id": 11,
           "text": "Cloud Computing",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 12,
           "text": "Web Apps",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 14,
           "text": "Design Thinking",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 15,
           "text": "Graphic Design",
-          "color": "#E8B124"
+          "color": "#389DBE"
         },
         {
           "id": 16,
           "text": "UX Design",
-          "color": "#E07141"
+          "color": "#389DBE"
         }
 
 
@@ -22838,78 +22838,78 @@ module.exports={
       "nodes": [{
           "id": 21,
           "text": "Apache Spark",
-          "color": "#007069"
+          "color": "#389DBE"
         }, {
           "id": 27,
           "text": "Python",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 22,
           "text": "React.js",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 23,
           "text": "Node.js",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 24,
           "text": "Elastic Search",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 25,
           "text": "MongoDB",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 28,
           "text": "Javascript",
-          "color": "#007069"
+          "color": "#389DBE"
         }, {
           "id": 34,
           "text": "Marketing",
-          "color": "#E8B124"
+          "color": "#389DBE"
         }, {
           "id": 33,
           "text": "Brand Hacking",
-          "color": "#E07141"
+          "color": "#389DBE"
         }, {
           "id": 30,
           "text": "Illustrator",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
 
 
         {
           "id": 31,
           "text": "InDesign",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 32,
           "text": "Adobe XD",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 29,
           "text": "Sketch",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
 
         {
           "id": 36,
           "text": "Data Analysis",
-          "color": "#00A79D"
+          "color": "#389DBE"
         },
         {
           "id": 37,
           "text": "Analytics",
-          "color": "#00A79D"
+          "color": "#389DBE"
         }
       ]
     }
@@ -23239,7 +23239,7 @@ function middleRing(w, h, data) {
   var shapeHeight = 40;
 
   ring = data.nodes.map(function (val, idx) {
-    var angle = 360 / data.nodes.length * idx - 70;
+    var angle = 360 / data.nodes.length * idx - 50;
 
     var x = w / 2 + xPointOnEllipse(w * 0.35 - 50, angle);
     var y = h / 2 + yPointOnEllipse(h * 0.35 - 50, angle);
@@ -23419,9 +23419,8 @@ var flexed = {
 };
 
 var imgStyle = {
-  maxWidth: "20%",
-  margin: "10px",
-  maxHeight: "100px"
+  height: "100px",
+  margin: "10px"
 };
 
 var Skills = React.createClass({
@@ -23455,14 +23454,18 @@ var Skills = React.createClass({
         null,
         React.createElement(
           _Col2.default,
-          { xs: 12, lgHidden: true, mdHidden: true },
+          { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true },
           React.createElement(
             _Col2.default,
-            { xs: 12, className: "pull-right" },
+            { xs: 10, xsOffset: 1 },
             React.createElement(
-              "h2",
-              { className: "pull-right" },
-              "Meta Studios Inc"
+              "center",
+              null,
+              React.createElement(
+                "h2",
+                null,
+                "Meta Studios Inc"
+              )
             )
           ),
           React.createElement(
@@ -23538,11 +23541,75 @@ var Skills = React.createClass({
         null,
         React.createElement(
           _Col2.default,
-          { md: 12, lgHidden: true, mdHidden: true },
+          { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true },
           React.createElement(
             "div",
             null,
-            "We Love Visualization Cloud Computing Analysis Brand Coaching"
+            React.createElement(
+              "center",
+              null,
+              React.createElement(
+                "h2",
+                null,
+                "We Love"
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Visualization"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Cloud Computing"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Analysis"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Brand Coaching"
+                )
+              )
+            )
           )
         )
       ),
@@ -23551,39 +23618,71 @@ var Skills = React.createClass({
         null,
         React.createElement(
           _Col2.default,
-          { md: 12, lgHidden: true, mdHidden: true },
+          { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true },
           React.createElement(
-            "h2",
+            "center",
             null,
-            "Tech We Use"
+            React.createElement(
+              "h2",
+              null,
+              "Tech We Use"
+            ),
+            React.createElement(
+              "h4",
+              null,
+              "explore with us"
+            )
           ),
           React.createElement(
-            "h4",
-            null,
-            "explore with us"
+            _Col2.default,
+            { md: 3, xs: 6 },
+            React.createElement(
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "http://spark.apache.org/" },
+                React.createElement("img", { src: "./img/spark.png", style: imgStyle })
+              )
+            )
           ),
           React.createElement(
-            "div",
-            { style: { diplay: 'inline-flex' } },
+            _Col2.default,
+            { md: 3, xs: 6 },
             React.createElement(
-              "a",
-              { href: "http://spark.apache.org/" },
-              React.createElement("img", { src: "./img/spark.png", style: imgStyle })
-            ),
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "https://facebook.github.io/react/" },
+                React.createElement("img", { src: "./img/react.png", style: imgStyle })
+              )
+            )
+          ),
+          React.createElement(
+            _Col2.default,
+            { md: 3, xs: 6 },
             React.createElement(
-              "a",
-              { href: "https://facebook.github.io/react/" },
-              React.createElement("img", { src: "./img/react.png", style: imgStyle })
-            ),
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "https://nodejs.org/en/" },
+                React.createElement("img", { src: "./img/nodejs.png", style: imgStyle })
+              )
+            )
+          ),
+          React.createElement(
+            _Col2.default,
+            { md: 3, xs: 6 },
             React.createElement(
-              "a",
-              { href: "https://nodejs.org/en/" },
-              React.createElement("img", { src: "./img/nodejs.png", style: imgStyle })
-            ),
-            React.createElement(
-              "a",
-              { href: "https://slack.com/" },
-              React.createElement("img", { src: "./img/slack.png", style: imgStyle })
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "https://slack.com/" },
+                React.createElement("img", { src: "./img/slack.png", style: imgStyle })
+              )
             )
           )
         )
@@ -23594,10 +23693,19 @@ var Skills = React.createClass({
         React.createElement(
           _Col2.default,
           { md: 12, smHidden: true, xsHidden: true },
-          React.createElement(_SVGgraphReact2.default, {
-            containerWidth: this.props.containerWidth,
-            containerHeight: this.props.containerHeight
-          })
+          React.createElement(
+            "center",
+            null,
+            React.createElement(
+              "h2",
+              null,
+              "Things we love"
+            ),
+            React.createElement(_SVGgraphReact2.default, {
+              containerWidth: this.props.containerWidth,
+              containerHeight: this.props.containerHeight
+            })
+          )
         )
       )
     );
@@ -23676,34 +23784,63 @@ var _Col2 = _interopRequireDefault(_Col);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var imgStyle = {
+  height: "60px",
+  margin: "10px"
+};
+
 var connect = function connect() {
   return _react2.default.createElement(
     _Row2.default,
-    null,
+    { style: { marginTop: "10px", marginBottom: "20px" } },
     _react2.default.createElement(
-      "h2",
-      null,
-      "Connect with us"
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
+      _Col2.default,
+      { xs: 10, xsOffset: 1 },
+      _react2.default.createElement(
+        "center",
+        null,
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Connect with us"
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/facebook.png" })
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/twitter.png" })
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/linkedin.png" })
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/email.png" })
+        )
+      )
     )
   );
 };
