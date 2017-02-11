@@ -33029,7 +33029,6 @@ var bannerStyleLeft = {
 };
 
 var headerStyle = {
-  position: "fixed",
   top: 0,
   left: 0,
   width: "100%",
@@ -33088,6 +33087,10 @@ var Banner = React.createClass({
 
   render: function render() {
 
+    setTimeout(function () {
+      scroll.scrollToTop();
+    }, 1500);
+
     return React.createElement(
       "div",
       null,
@@ -33139,13 +33142,13 @@ var Banner = React.createClass({
       ),
       React.createElement(
         _velocityReact.VelocityTransitionGroup,
-        { enter: { animation: "slideDown" }, leave: { animation: "slideUp" } },
+        { enter: { animation: "slideDown", duration: 1500, delay: 500 }, leave: { animation: "slideUp" } },
         !this.state.fullSize ? React.createElement(
-          _Row2.default,
+          "div",
           { style: headerStyle },
           React.createElement(
             _Col2.default,
-            { xs: 12, style: { margin: '0px', padding: '0px', height: "70px", color: "#FAFAFA" } },
+            { xs: 12, style: { height: "70px", color: "#FAFAFA" } },
             React.createElement(
               ReactFitText,
               { compressor: 2 },

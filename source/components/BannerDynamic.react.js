@@ -28,12 +28,11 @@ const bannerStyleLeft = {
 }
 
 const headerStyle ={
-  position:"fixed",
   top:0,
   left:0,
   width:"100%",
   height:"70px",
-  backgroundColor:"#389DBE",
+  backgroundColor:"#389DBE"
 }
 
 
@@ -90,6 +89,11 @@ var Banner = React.createClass({
 
   render: function() {
 
+
+    setTimeout(function () {
+      scroll.scrollToTop();
+    }, 1500);
+
     return (
       <div>
 
@@ -126,15 +130,15 @@ var Banner = React.createClass({
             : undefined}
         </VelocityTransitionGroup>
 
-        <VelocityTransitionGroup enter={{animation: "slideDown"}} leave={{animation: "slideUp"}}>
+        <VelocityTransitionGroup enter={{animation: "slideDown", duration:1500, delay:500}} leave={{animation: "slideUp"}}>
           {!this.state.fullSize ?
 
 
-              <Row style={headerStyle}>
-                <Col xs={12} style={{margin:'0px',padding:'0px',height:"70px",color:"#FAFAFA"}}>
+              <div style={headerStyle}>
+                <Col xs={12} style={{height:"70px",color:"#FAFAFA"}}>
                   <ReactFitText compressor={2}><center><h1>Meta Studios Inc</h1></center></ReactFitText>
                 </Col>
-              </Row>
+              </div>
 
 
 
