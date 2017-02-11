@@ -23473,7 +23473,7 @@ var Skills = React.createClass({
             { style: textStyle },
             React.createElement(
               _Col2.default,
-              { xs: 11, className: "pull-right", style: flexed },
+              { xs: 10, xsOffset: 1, style: flexed },
               React.createElement(
                 "h3",
                 null,
@@ -23488,7 +23488,7 @@ var Skills = React.createClass({
             ),
             React.createElement(
               _Col2.default,
-              { xs: 11, className: "pull-right", style: flexed },
+              { xs: 10, xsOffset: 1, style: flexed },
               React.createElement(
                 "h3",
                 null,
@@ -23504,7 +23504,7 @@ var Skills = React.createClass({
             ),
             React.createElement(
               _Col2.default,
-              { xs: 11, className: "pull-right", style: flexed },
+              { xs: 10, xsOffset: 1, style: flexed },
               " ",
               React.createElement(
                 "h3",
@@ -23520,7 +23520,7 @@ var Skills = React.createClass({
             ),
             React.createElement(
               _Col2.default,
-              { xs: 11, className: "pull-right", style: flexed },
+              { xs: 10, xsOffset: 1, style: flexed },
               React.createElement(
                 "h3",
                 null,

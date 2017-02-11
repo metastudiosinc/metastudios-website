@@ -47,7 +47,7 @@ var Skills = React.createClass({
     return (
       <div>
         <Row>
-        <Col xs={10} xsOffset={1} lgHidden mdHidden>
+        <div lgHidden mdHidden>
 
           <Col xs={10} xsOffset={1}>
             <center>
@@ -60,7 +60,7 @@ var Skills = React.createClass({
             <Col xs={10} xsOffset={1} style={flexed}> <h3>transforming data into insights <br /><strong>We are storytellers</strong></h3></Col>
             <Col xs={10} xsOffset={1} style={flexed}><h3>putting the cookies on the bottom shelf <br /><strong>We are rebels and scruffy looking nerf herders</strong></h3></Col>
           </div>
-          </Col>
+        </div>
         </Row>
 
         <Row>
