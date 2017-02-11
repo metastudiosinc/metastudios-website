@@ -9,7 +9,8 @@ const imgStyle={
 
 
 const connect = () => (
-  <Row style={{marginTop:"10px", marginBottom:"20px"}}>
+
+  <Row style={{marginBottom:"20px", height:"auto"}}>
     <Col xs={10} xsOffset={1}>
       <center><h2>Connect with us</h2></center>
       <Col md={3} xs={6}><center><img style={imgStyle} src="/img/facebook.png" /></center></Col>
@@ -18,6 +19,7 @@ const connect = () => (
       <Col md={3} xs={6}><center><img style={imgStyle} src="/img/email.png" /></center></Col>
     </Col>
   </Row>
+
 );
 
 

@@ -1,9 +1,10 @@
 var React = require('react');
 var Header = require('./Header.react');
-import banner from "./banner.react.js"
+import Banner from "./BannerDynamic.react.js"
 import Skills from "./Skills.react.js"
 import connect from "./connect.react.js"
 import footer from "./footer.react.js"
+import Dimensions from 'react-dimensions'
 
 var Application = React.createClass({
 
@@ -37,10 +38,15 @@ var Application = React.createClass({
 
   render: function() {
     return (
-      <div className="container-fluid" style={{margin:'0px',padding:'0px'}}>
-        {banner()}
+      <div className="container-fluid" style={{margin:'0px',padding:'0px', height:"100%"}}>
+        <Banner
+          containerWidth={this.props.containerWidth}
+          containerHeight={this.props.containerHeight}
+          style={{height:"100%"}}/>
+          <div>
         {connect()}
         <Skills />
+      </div>
         {footer()}
       </div>
     );
@@ -59,4 +65,4 @@ var Application = React.createClass({
 
 });
 
-module.exports = Application;
+module.exports = Dimensions()(Application);
