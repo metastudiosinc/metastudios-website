@@ -55,10 +55,10 @@ var Skills = React.createClass({
             </center>
           </Col>
           <div style={textStyle}>
-            <Col xs={11} className="pull-right"  style={flexed}><h3>combining new tech, clever strategy, and intuitive UI <br /><strong>We are creators</strong></h3></Col>
-            <Col xs={11} className="pull-right" style={flexed}><h3>building unique data visualization software solutions<br /> <strong>We are developers</strong></h3></Col>
-            <Col xs={11} className="pull-right" style={flexed}> <h3>transforming data into insights <br /><strong>We are storytellers</strong></h3></Col>
-            <Col xs={11} className="pull-right" style={flexed}><h3>putting the cookies on the bottom shelf <br /><strong>We are rebels and scruffy looking nerf herders</strong></h3></Col>
+            <Col xs={10} xsOffset={1} style={flexed}><h3>combining new tech, clever strategy, and intuitive UI <br /><strong>We are creators</strong></h3></Col>
+            <Col xs={10} xsOffset={1} style={flexed}><h3>building unique data visualization software solutions<br /> <strong>We are developers</strong></h3></Col>
+            <Col xs={10} xsOffset={1} style={flexed}> <h3>transforming data into insights <br /><strong>We are storytellers</strong></h3></Col>
+            <Col xs={10} xsOffset={1} style={flexed}><h3>putting the cookies on the bottom shelf <br /><strong>We are rebels and scruffy looking nerf herders</strong></h3></Col>
           </div>
           </Col>
         </Row>
