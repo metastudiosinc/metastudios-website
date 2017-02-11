@@ -46,14 +46,8 @@ var Skills = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div >
         <Row>
-
-          <Col xs={10} xsOffset={1} lgHidden mdHidden>
-            <center>
-              <h2>Meta Studios Inc</h2>
-            </center>
-          </Col>
           <div style={textStyle}>
             <Col xs={10} xsOffset={1} lgHidden mdHidden style={flexed}><h3>combining new tech, clever strategy, and intuitive UI <br /><strong>We are creators</strong></h3></Col>
             <Col xs={10} xsOffset={1} lgHidden mdHidden style={flexed}><h3>building unique data visualization software solutions<br /> <strong>We are developers</strong></h3></Col>

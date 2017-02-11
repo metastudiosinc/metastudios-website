@@ -23,7 +23,6 @@ function calcLinks(w,h,data) {
   var links;
 
   links = data.map(function(val, idx) {
-    console.log(val);
 
     var from = centers[val.from.toString()]
     var to = centers[val.to.toString()]
@@ -41,7 +40,6 @@ function calcLinks(w,h,data) {
     var curvePath = ("M" + from['x'].toString() + " " + from['y'].toString() +
                      "Q " + (from['x']+ xoffset).toString() + " " + (from['y'] + yoffset).toString() +
                      " " + to['x'].toString() + " " + to['y'].toString() );
-    console.log(curvePath);
     return (
       <path key={idx} d={curvePath} stroke="#024873" fill="transparent" strokeWidth="0.2em" opacity="0.5"/>
     )
