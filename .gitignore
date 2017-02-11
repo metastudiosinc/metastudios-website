@@ -1,5 +1,5 @@
 #build files
-*client.js
+public/js/client.js
 *client.css
 
 # Logs
