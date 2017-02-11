@@ -23420,7 +23420,8 @@ var flexed = {
 
 var imgStyle = {
   height: "100px",
-  margin: "10px"
+  margin: "10px",
+  maxWidth: "150px"
 };
 
 var Skills = React.createClass({
@@ -23456,81 +23457,77 @@ var Skills = React.createClass({
           _Col2.default,
           { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true },
           React.createElement(
-            _Col2.default,
-            { xs: 10, xsOffset: 1 },
+            "center",
+            null,
             React.createElement(
-              "center",
+              "h2",
               null,
+              "Meta Studios Inc"
+            )
+          )
+        ),
+        React.createElement(
+          "div",
+          { style: textStyle },
+          React.createElement(
+            _Col2.default,
+            { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true, style: flexed },
+            React.createElement(
+              "h3",
+              null,
+              "combining new tech, clever strategy, and intuitive UI ",
+              React.createElement("br", null),
               React.createElement(
-                "h2",
+                "strong",
                 null,
-                "Meta Studios Inc"
+                "We are creators"
               )
             )
           ),
           React.createElement(
-            "div",
-            { style: textStyle },
+            _Col2.default,
+            { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true, style: flexed },
             React.createElement(
-              _Col2.default,
-              { xs: 10, xsOffset: 1, style: flexed },
-              React.createElement(
-                "h3",
-                null,
-                "combining new tech, clever strategy, and intuitive UI ",
-                React.createElement("br", null),
-                React.createElement(
-                  "strong",
-                  null,
-                  "We are creators"
-                )
-              )
-            ),
-            React.createElement(
-              _Col2.default,
-              { xs: 10, xsOffset: 1, style: flexed },
-              React.createElement(
-                "h3",
-                null,
-                "building unique data visualization software solutions",
-                React.createElement("br", null),
-                " ",
-                React.createElement(
-                  "strong",
-                  null,
-                  "We are developers"
-                )
-              )
-            ),
-            React.createElement(
-              _Col2.default,
-              { xs: 10, xsOffset: 1, style: flexed },
+              "h3",
+              null,
+              "building unique data visualization software solutions",
+              React.createElement("br", null),
               " ",
               React.createElement(
-                "h3",
+                "strong",
                 null,
-                "transforming data into insights ",
-                React.createElement("br", null),
-                React.createElement(
-                  "strong",
-                  null,
-                  "We are storytellers"
-                )
+                "We are developers"
               )
-            ),
+            )
+          ),
+          React.createElement(
+            _Col2.default,
+            { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true, style: flexed },
+            " ",
             React.createElement(
-              _Col2.default,
-              { xs: 10, xsOffset: 1, style: flexed },
+              "h3",
+              null,
+              "transforming data into insights ",
+              React.createElement("br", null),
               React.createElement(
-                "h3",
+                "strong",
                 null,
-                "putting the cookies on the bottom shelf ",
-                React.createElement("br", null),
-                React.createElement(
-                  "strong",
-                  null,
-                  "We are rebels and scruffy looking nerf herders"
-                )
+                "We are storytellers"
+              )
+            )
+          ),
+          React.createElement(
+            _Col2.default,
+            { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true, style: flexed },
+            React.createElement(
+              "h3",
+              null,
+              "putting the cookies on the bottom shelf ",
+              React.createElement("br", null),
+              React.createElement(
+                "strong",
+                null,
+                "We are rebels and scruffy looking nerf herders"
               )
             )
           )
