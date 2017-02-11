@@ -3143,7 +3143,6 @@ function curry(fn) {
   return function () {
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
-<<<<<<< HEAD
     }
 
     var last = args[args.length - 1];
@@ -3292,156 +3291,6 @@ function splitBsProps(props) {
   return [getBsProps(props), elementProps];
 }
 
-=======
-    }
-
-    var last = args[args.length - 1];
-    if (typeof last === 'function') {
-      return fn.apply(undefined, args);
-    }
-    return function (Component) {
-      return fn.apply(undefined, args.concat([Component]));
-    };
-  };
-} // TODO: The publicly exposed parts of this should be in lib/BootstrapUtils.
-
-function prefix(props, variant) {
-  !(props.bsClass != null) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2['default'])(false, 'A `bsClass` prop is required for this component') : (0, _invariant2['default'])(false) : void 0;
-  return props.bsClass + (variant ? '-' + variant : '');
-}
-
-var bsClass = exports.bsClass = curry(function (defaultClass, Component) {
-  var propTypes = Component.propTypes || (Component.propTypes = {});
-  var defaultProps = Component.defaultProps || (Component.defaultProps = {});
-
-  propTypes.bsClass = _react.PropTypes.string;
-  defaultProps.bsClass = defaultClass;
-
-  return Component;
-});
-
-var bsStyles = exports.bsStyles = curry(function (styles, defaultStyle, Component) {
-  if (typeof defaultStyle !== 'string') {
-    Component = defaultStyle;
-    defaultStyle = undefined;
-  }
-
-  var existing = Component.STYLES || [];
-  var propTypes = Component.propTypes || {};
-
-  styles.forEach(function (style) {
-    if (existing.indexOf(style) === -1) {
-      existing.push(style);
-    }
-  });
-
-  var propType = _react.PropTypes.oneOf(existing);
-
-  // expose the values on the propType function for documentation
-  Component.STYLES = propType._values = existing;
-
-  Component.propTypes = (0, _extends3['default'])({}, propTypes, {
-    bsStyle: propType
-  });
-
-  if (defaultStyle !== undefined) {
-    var defaultProps = Component.defaultProps || (Component.defaultProps = {});
-    defaultProps.bsStyle = defaultStyle;
-  }
-
-  return Component;
-});
-
-var bsSizes = exports.bsSizes = curry(function (sizes, defaultSize, Component) {
-  if (typeof defaultSize !== 'string') {
-    Component = defaultSize;
-    defaultSize = undefined;
-  }
-
-  var existing = Component.SIZES || [];
-  var propTypes = Component.propTypes || {};
-
-  sizes.forEach(function (size) {
-    if (existing.indexOf(size) === -1) {
-      existing.push(size);
-    }
-  });
-
-  var values = [];
-  existing.forEach(function (size) {
-    var mappedSize = _StyleConfig.SIZE_MAP[size];
-    if (mappedSize && mappedSize !== size) {
-      values.push(mappedSize);
-    }
-
-    values.push(size);
-  });
-
-  var propType = _react.PropTypes.oneOf(values);
-  propType._values = values;
-
-  // expose the values on the propType function for documentation
-  Component.SIZES = existing;
-
-  Component.propTypes = (0, _extends3['default'])({}, propTypes, {
-    bsSize: propType
-  });
-
-  if (defaultSize !== undefined) {
-    if (!Component.defaultProps) {
-      Component.defaultProps = {};
-    }
-    Component.defaultProps.bsSize = defaultSize;
-  }
-
-  return Component;
-});
-
-function getClassSet(props) {
-  var _classes;
-
-  var classes = (_classes = {}, _classes[prefix(props)] = true, _classes);
-
-  if (props.bsSize) {
-    var bsSize = _StyleConfig.SIZE_MAP[props.bsSize] || props.bsSize;
-    classes[prefix(props, bsSize)] = true;
-  }
-
-  if (props.bsStyle) {
-    classes[prefix(props, props.bsStyle)] = true;
-  }
-
-  return classes;
-}
-
-function getBsProps(props) {
-  return {
-    bsClass: props.bsClass,
-    bsSize: props.bsSize,
-    bsStyle: props.bsStyle,
-    bsRole: props.bsRole
-  };
-}
-
-function isBsProp(propName) {
-  return propName === 'bsClass' || propName === 'bsSize' || propName === 'bsStyle' || propName === 'bsRole';
-}
-
-function splitBsProps(props) {
-  var elementProps = {};
-  (0, _entries2['default'])(props).forEach(function (_ref) {
-    var propName = _ref[0],
-        propValue = _ref[1];
-
-    if (!isBsProp(propName)) {
-      elementProps[propName] = propValue;
-    }
-  });
-
-  return [getBsProps(props), elementProps];
-}
-
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
 function splitBsPropsAndOmit(props, omittedPropNames) {
   var isOmittedProp = {};
   omittedPropNames.forEach(function (propName) {
@@ -19761,81 +19610,6 @@ function createChainableTypeChecker(validate) {
     return validate.apply(undefined, [props, propName, componentNameSafe, location, propFullNameSafe].concat(args));
   }
 
-<<<<<<< HEAD
-	return to;
-};
-
-},{}],249:[function(require,module,exports){
-'use strict';
-
-exports.__esModule = true;
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _createChainableTypeChecker = require('./utils/createChainableTypeChecker');
-
-var _createChainableTypeChecker2 = _interopRequireDefault(_createChainableTypeChecker);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function elementType(props, propName, componentName, location, propFullName) {
-  var propValue = props[propName];
-  var propType = typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue);
-
-  if (_react2.default.isValidElement(propValue)) {
-    return new Error('Invalid ' + location + ' `' + propFullName + '` of type ReactElement ' + ('supplied to `' + componentName + '`, expected an element type (a string ') + 'or a ReactClass).');
-  }
-
-  if (propType !== 'function' && propType !== 'string') {
-    return new Error('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected an element type (a string ') + 'or a ReactClass).');
-  }
-
-  return null;
-}
-
-exports.default = (0, _createChainableTypeChecker2.default)(elementType);
-},{"./utils/createChainableTypeChecker":250,"react":276}],250:[function(require,module,exports){
-'use strict';
-
-exports.__esModule = true;
-exports.default = createChainableTypeChecker;
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
-// Mostly taken from ReactPropTypes.
-
-function createChainableTypeChecker(validate) {
-  function checkType(isRequired, props, propName, componentName, location, propFullName) {
-    var componentNameSafe = componentName || '<<anonymous>>';
-    var propFullNameSafe = propFullName || propName;
-
-    if (props[propName] == null) {
-      if (isRequired) {
-        return new Error('Required ' + location + ' `' + propFullNameSafe + '` was not specified ' + ('in `' + componentNameSafe + '`.'));
-      }
-
-      return null;
-    }
-
-    for (var _len = arguments.length, args = Array(_len > 6 ? _len - 6 : 0), _key = 6; _key < _len; _key++) {
-      args[_key - 6] = arguments[_key];
-    }
-
-    return validate.apply(undefined, [props, propName, componentNameSafe, location, propFullNameSafe].concat(args));
-  }
-
-=======
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
   var chainedCheckType = checkType.bind(null, false);
   chainedCheckType.isRequired = checkType.bind(null, true);
 
@@ -23019,12 +22793,12 @@ module.exports={
         {
           "id": 2,
           "text": "Design",
-          "color": "#024873"
+          "color": "#389DBE"
         },
         {
           "id": 3,
           "text": "Code",
-          "color": "#65D1E4"
+          "color": "#389DBE"
         }
       ]
     },
@@ -23033,37 +22807,29 @@ module.exports={
       "nodes": [{
           "id": 11,
           "text": "Cloud Computing",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 12,
-<<<<<<< HEAD
           "text": "Web Apps",
-=======
-          "text": "Web Development",
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 14,
           "text": "Design Thinking",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 15,
           "text": "Graphic Design",
-          "color": "#E8B124"
+          "color": "#389DBE"
         },
         {
           "id": 16,
           "text": "UX Design",
-          "color": "#E07141"
-<<<<<<< HEAD
+          "color": "#389DBE"
         }
-=======
-        },
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
 
 
       ]
@@ -23072,91 +22838,82 @@ module.exports={
       "nodes": [{
           "id": 21,
           "text": "Apache Spark",
-          "color": "#007069"
+          "color": "#389DBE"
         }, {
           "id": 27,
           "text": "Python",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 22,
           "text": "React.js",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 23,
           "text": "Node.js",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 24,
           "text": "Elastic Search",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 25,
           "text": "MongoDB",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 28,
           "text": "Javascript",
-          "color": "#007069"
+          "color": "#389DBE"
         }, {
           "id": 34,
           "text": "Marketing",
-          "color": "#E8B124"
+          "color": "#389DBE"
         }, {
           "id": 33,
           "text": "Brand Hacking",
-          "color": "#E07141"
+          "color": "#389DBE"
         }, {
           "id": 30,
           "text": "Illustrator",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
 
 
         {
           "id": 31,
           "text": "InDesign",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 32,
           "text": "Adobe XD",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 29,
           "text": "Sketch",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
 
         {
           "id": 36,
           "text": "Data Analysis",
-          "color": "#00A79D"
+          "color": "#389DBE"
         },
         {
           "id": 37,
           "text": "Analytics",
-          "color": "#00A79D"
-<<<<<<< HEAD
-        },
-        {
-          "id": 38,
-          "text": "Balls",
-          "color": "#00A79D"
-=======
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
+          "color": "#389DBE"
         }
       ]
     }
   },
-<<<<<<< HEAD
   "links": [{
       "from": 14,
       "to": 34
@@ -23187,18 +22944,6 @@ module.exports={
       "from": 3,
       "to": 1
     },
-=======
-  "links": [
-    {"from": 14,"to": 34},
-    {"from": 14,"to": 33},
-    {"from": 15,"to": 31},
-    {"from": 15,"to": 30},
-    {"from": 16,"to": 32},
-    {"from": 16,"to": 29},
-
-
-    {"from": 3,"to": 1},
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
     {
       "from": 3,
       "to": 2
@@ -23267,14 +23012,7 @@ module.exports={
     {
       "from": 12,
       "to": 28
-<<<<<<< HEAD
     }
-=======
-    },
-
-
-
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
 
   ]
 }
@@ -23501,11 +23239,7 @@ function middleRing(w, h, data) {
   var shapeHeight = 40;
 
   ring = data.nodes.map(function (val, idx) {
-<<<<<<< HEAD
-    var angle = 360 / data.nodes.length * idx - 70;
-=======
     var angle = 360 / data.nodes.length * idx - 50;
->>>>>>> 5727906cc0c3f5a23547d54b476ec5d69a9b6ca8
 
     var x = w / 2 + xPointOnEllipse(w * 0.35 - 50, angle);
     var y = h / 2 + yPointOnEllipse(h * 0.35 - 50, angle);
@@ -23685,9 +23419,8 @@ var flexed = {
 };
 
 var imgStyle = {
-  maxWidth: "20%",
-  margin: "10px",
-  maxHeight: "100px"
+  height: "100px",
+  margin: "10px"
 };
 
 var Skills = React.createClass({
@@ -23721,14 +23454,18 @@ var Skills = React.createClass({
         null,
         React.createElement(
           _Col2.default,
-          { xs: 12, lgHidden: true, mdHidden: true },
+          { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true },
           React.createElement(
             _Col2.default,
-            { xs: 12, className: "pull-right" },
+            { xs: 10, xsOffset: 1 },
             React.createElement(
-              "h2",
-              { className: "pull-right" },
-              "Meta Studios Inc"
+              "center",
+              null,
+              React.createElement(
+                "h2",
+                null,
+                "Meta Studios Inc"
+              )
             )
           ),
           React.createElement(
@@ -23804,11 +23541,75 @@ var Skills = React.createClass({
         null,
         React.createElement(
           _Col2.default,
-          { md: 12, lgHidden: true, mdHidden: true },
+          { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true },
           React.createElement(
             "div",
             null,
-            "We Love Visualization Cloud Computing Analysis Brand Coaching"
+            React.createElement(
+              "center",
+              null,
+              React.createElement(
+                "h2",
+                null,
+                "We Love"
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Visualization"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Cloud Computing"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Analysis"
+                )
+              )
+            ),
+            React.createElement(
+              _Col2.default,
+              { md: 3, xs: 6 },
+              React.createElement(
+                "center",
+                null,
+                React.createElement("img", { src: "./img/logo.svg", style: imgStyle }),
+                React.createElement(
+                  "h4",
+                  null,
+                  "Brand Coaching"
+                )
+              )
+            )
           )
         )
       ),
@@ -23817,39 +23618,71 @@ var Skills = React.createClass({
         null,
         React.createElement(
           _Col2.default,
-          { md: 12, lgHidden: true, mdHidden: true },
+          { xs: 10, xsOffset: 1, lgHidden: true, mdHidden: true },
           React.createElement(
-            "h2",
+            "center",
             null,
-            "Tech We Use"
+            React.createElement(
+              "h2",
+              null,
+              "Tech We Use"
+            ),
+            React.createElement(
+              "h4",
+              null,
+              "explore with us"
+            )
           ),
           React.createElement(
-            "h4",
-            null,
-            "explore with us"
+            _Col2.default,
+            { md: 3, xs: 6 },
+            React.createElement(
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "http://spark.apache.org/" },
+                React.createElement("img", { src: "./img/spark.png", style: imgStyle })
+              )
+            )
           ),
           React.createElement(
-            "div",
-            { style: { diplay: 'inline-flex' } },
+            _Col2.default,
+            { md: 3, xs: 6 },
             React.createElement(
-              "a",
-              { href: "http://spark.apache.org/" },
-              React.createElement("img", { src: "./img/spark.png", style: imgStyle })
-            ),
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "https://facebook.github.io/react/" },
+                React.createElement("img", { src: "./img/react.png", style: imgStyle })
+              )
+            )
+          ),
+          React.createElement(
+            _Col2.default,
+            { md: 3, xs: 6 },
             React.createElement(
-              "a",
-              { href: "https://facebook.github.io/react/" },
-              React.createElement("img", { src: "./img/react.png", style: imgStyle })
-            ),
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "https://nodejs.org/en/" },
+                React.createElement("img", { src: "./img/nodejs.png", style: imgStyle })
+              )
+            )
+          ),
+          React.createElement(
+            _Col2.default,
+            { md: 3, xs: 6 },
             React.createElement(
-              "a",
-              { href: "https://nodejs.org/en/" },
-              React.createElement("img", { src: "./img/nodejs.png", style: imgStyle })
-            ),
-            React.createElement(
-              "a",
-              { href: "https://slack.com/" },
-              React.createElement("img", { src: "./img/slack.png", style: imgStyle })
+              "center",
+              null,
+              React.createElement(
+                "a",
+                { href: "https://slack.com/" },
+                React.createElement("img", { src: "./img/slack.png", style: imgStyle })
+              )
             )
           )
         )
@@ -23860,10 +23693,19 @@ var Skills = React.createClass({
         React.createElement(
           _Col2.default,
           { md: 12, smHidden: true, xsHidden: true },
-          React.createElement(_SVGgraphReact2.default, {
-            containerWidth: this.props.containerWidth,
-            containerHeight: this.props.containerHeight
-          })
+          React.createElement(
+            "center",
+            null,
+            React.createElement(
+              "h2",
+              null,
+              "Things we love"
+            ),
+            React.createElement(_SVGgraphReact2.default, {
+              containerWidth: this.props.containerWidth,
+              containerHeight: this.props.containerHeight
+            })
+          )
         )
       )
     );
@@ -23942,34 +23784,63 @@ var _Col2 = _interopRequireDefault(_Col);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var imgStyle = {
+  height: "60px",
+  margin: "10px"
+};
+
 var connect = function connect() {
   return _react2.default.createElement(
     _Row2.default,
-    null,
+    { style: { marginTop: "10px", marginBottom: "20px" } },
     _react2.default.createElement(
-      "h2",
-      null,
-      "Connect with us"
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      _react2.default.createElement("img", { src: "" })
+      _Col2.default,
+      { xs: 10, xsOffset: 1 },
+      _react2.default.createElement(
+        "center",
+        null,
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Connect with us"
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/facebook.png" })
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/twitter.png" })
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/linkedin.png" })
+        )
+      ),
+      _react2.default.createElement(
+        _Col2.default,
+        { md: 3, xs: 6 },
+        _react2.default.createElement(
+          "center",
+          null,
+          _react2.default.createElement("img", { style: imgStyle, src: "/img/email.png" })
+        )
+      )
     )
   );
 };

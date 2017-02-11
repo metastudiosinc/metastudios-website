@@ -17,10 +17,9 @@ const flexed = {
   display:'inline-flex'
 }
 
-const imgStyle = {
-  maxWidth:"20%",
-  margin:"10px",
-  maxHeight:"100px"
+const imgStyle={
+  height:"100px",
+  margin:"10px"
 }
 
 
@@ -48,9 +47,13 @@ var Skills = React.createClass({
     return (
       <div>
         <Row>
-        <Col xs={12} lgHidden mdHidden>
+        <Col xs={10} xsOffset={1} lgHidden mdHidden>
 
-          <Col xs={12} className="pull-right"><h2 className="pull-right">Meta Studios Inc</h2></Col>
+          <Col xs={10} xsOffset={1}>
+            <center>
+              <h2>Meta Studios Inc</h2>
+            </center>
+          </Col>
           <div style={textStyle}>
             <Col xs={11} className="pull-right"  style={flexed}><h3>combining new tech, clever strategy, and intuitive UI <br /><strong>We are creators</strong></h3></Col>
             <Col xs={11} className="pull-right" style={flexed}><h3>building unique data visualization software solutions<br /> <strong>We are developers</strong></h3></Col>
@@ -61,34 +64,52 @@ var Skills = React.createClass({
         </Row>
 
         <Row>
-          <Col md={12} lgHidden mdHidden>
+          <Col xs={10} xsOffset={1} lgHidden mdHidden>
           <div>
-            We Love
+            <center><h2>We Love</h2></center>
 
-              Visualization
-
-              Cloud Computing
-
-              Analysis
-
-              Brand Coaching
+              <Col md={3} xs={6}>
+                <center>
+                  <img src='./img/logo.svg' style={imgStyle}/>
+                  <h4>Visualization</h4>
+                </center>
+              </Col>
+              <Col md={3} xs={6}>
+                <center>
+                  <img src='./img/logo.svg' style={imgStyle}/>
+                  <h4>Cloud Computing</h4>
+                </center>
+              </Col>
+              <Col md={3} xs={6}>
+                <center>
+                  <img src='./img/logo.svg' style={imgStyle}/>
+                  <h4>Analysis</h4>
+                </center>
+              </Col>
+              <Col md={3} xs={6}>
+                <center>
+                  <img src='./img/logo.svg' style={imgStyle}/>
+                  <h4>Brand Coaching</h4>
+                </center>
+              </Col>
 
           </div>
         </Col>
         </Row>
 
         <Row>
-          <Col md={12} lgHidden mdHidden>
+          <Col xs={10} xsOffset={1} lgHidden mdHidden>
+            <center>
           <h2>Tech We Use</h2>
           <h4>explore with us</h4>
-          <div style={{diplay:'inline-flex'}}>
+          </center>
 
-            <a href="http://spark.apache.org/" ><img src='./img/spark.png' style={imgStyle}/></a>
-            <a href="https://facebook.github.io/react/" ><img src='./img/react.png' style={imgStyle}/></a>
-            <a href="https://nodejs.org/en/" ><img src='./img/nodejs.png' style={imgStyle}/></a>
-            <a href="https://slack.com/" ><img src='./img/slack.png' style={imgStyle}/></a>
+            <Col md={3} xs={6}><center><a href="http://spark.apache.org/" ><img src='./img/spark.png' style={imgStyle}/></a></center></Col>
+            <Col md={3} xs={6}><center><a href="https://facebook.github.io/react/" ><img src='./img/react.png' style={imgStyle}/></a></center></Col>
+            <Col md={3} xs={6}><center><a href="https://nodejs.org/en/" ><img src='./img/nodejs.png' style={imgStyle}/></a></center></Col>
+            <Col md={3} xs={6}><center><a href="https://slack.com/" ><img src='./img/slack.png' style={imgStyle}/></a></center></Col>
 
-          </div>
+
         </Col>
 
 
@@ -96,10 +117,13 @@ var Skills = React.createClass({
 
       <Row>
         <Col md={12} smHidden xsHidden>
+          <center>
+          <h2>Things we love</h2>
           <SVGgraph
               containerWidth={this.props.containerWidth}
               containerHeight={this.props.containerHeight}
             />
+          </center>
         </Col>
       </Row>
     </div>

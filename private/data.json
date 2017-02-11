@@ -9,12 +9,12 @@
         {
           "id": 2,
           "text": "Design",
-          "color": "#024873"
+          "color": "#389DBE"
         },
         {
           "id": 3,
           "text": "Code",
-          "color": "#65D1E4"
+          "color": "#389DBE"
         }
       ]
     },
@@ -23,28 +23,28 @@
       "nodes": [{
           "id": 11,
           "text": "Cloud Computing",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 12,
           "text": "Web Apps",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 14,
           "text": "Design Thinking",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 15,
           "text": "Graphic Design",
-          "color": "#E8B124"
+          "color": "#389DBE"
         },
         {
           "id": 16,
           "text": "UX Design",
-          "color": "#E07141"
+          "color": "#389DBE"
         }
 
 
@@ -54,78 +54,78 @@
       "nodes": [{
           "id": 21,
           "text": "Apache Spark",
-          "color": "#007069"
+          "color": "#389DBE"
         }, {
           "id": 27,
           "text": "Python",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 22,
           "text": "React.js",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 23,
           "text": "Node.js",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 24,
           "text": "Elastic Search",
-          "color": "#007069"
+          "color": "#389DBE"
         },
         {
           "id": 25,
           "text": "MongoDB",
-          "color": "#007069"
+          "color": "#389DBE"
         },
 
         {
           "id": 28,
           "text": "Javascript",
-          "color": "#007069"
+          "color": "#389DBE"
         }, {
           "id": 34,
           "text": "Marketing",
-          "color": "#E8B124"
+          "color": "#389DBE"
         }, {
           "id": 33,
           "text": "Brand Hacking",
-          "color": "#E07141"
+          "color": "#389DBE"
         }, {
           "id": 30,
           "text": "Illustrator",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
 
 
         {
           "id": 31,
           "text": "InDesign",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 32,
           "text": "Adobe XD",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
         {
           "id": 29,
           "text": "Sketch",
-          "color": "#E07141"
+          "color": "#389DBE"
         },
 
         {
           "id": 36,
           "text": "Data Analysis",
-          "color": "#00A79D"
+          "color": "#389DBE"
         },
         {
           "id": 37,
           "text": "Analytics",
-          "color": "#00A79D"
+          "color": "#389DBE"
         }
       ]
     }
@@ -228,7 +228,7 @@
     {
       "from": 12,
       "to": 28
-    },
+    }
 
   ]
 }

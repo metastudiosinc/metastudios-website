@@ -91,7 +91,7 @@ function middleRing(w,h, data) {
   const shapeHeight = 40
 
   ring = data.nodes.map(function(val, idx) {
-    var angle = (360/data.nodes.length) * idx - 70
+    var angle = (360/data.nodes.length) * idx - 50
 
 
     var x = w/2 + xPointOnEllipse(w*0.35 -50,angle)
