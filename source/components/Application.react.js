@@ -43,10 +43,10 @@ var Application = React.createClass({
           containerWidth={this.props.containerWidth}
           containerHeight={this.props.containerHeight}
           style={{height:"100%"}}/>
-          <div>
+
         {connect()}
         <Skills />
-      </div>
+      
         {footer()}
       </div>
     );
