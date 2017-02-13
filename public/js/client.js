@@ -33021,8 +33021,8 @@ var imgStyle = {
 var bannerStyleLeft = {
   backgroundColor: "#389DBE",
   height: "100%",
-  minHeight: "1200px",
-  maxHeight: "1800px",
+  minHeight: "1800px",
+  maxHeight: "2200px",
   paddingTop: "20%",
   color: "#FAFAFA",
   textAlign: 'right'
