@@ -92,7 +92,7 @@ var Banner = React.createClass({
 
     setTimeout(function () {
       scroll.scrollToTop();
-    }, 1500);
+    }, 1000);
 
     return (
       <div>
