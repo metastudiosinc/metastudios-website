@@ -18,8 +18,7 @@ const bar={
 
 
 const connect = () => (
-<div>
-  <center><h2><br /></h2></center>
+
   <Row style={{marginBottom:"20px", height:"auto"}}>
     <Col xs={10} xsOffset={1}>
       <Col md={3} xs={6}><center><img style={imgStyle} src="/img/facebook.png" /></center></Col>
@@ -28,8 +27,6 @@ const connect = () => (
       <Col md={3} xs={6}><center><img style={imgStyle} src="/img/email.png" /></center></Col>
     </Col>
   </Row>
-  <center><h2 style={bar}>Connect with us</h2></center>
-</div>
 
 );
 

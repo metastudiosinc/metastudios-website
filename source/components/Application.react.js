@@ -46,7 +46,8 @@ var Application = React.createClass({
 
         {connect()}
         <Skills />
-      
+
+        {connect()}
         {footer()}
       </div>
     );
