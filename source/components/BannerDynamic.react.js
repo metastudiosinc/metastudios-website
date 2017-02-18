@@ -105,8 +105,8 @@ var Banner = React.createClass({
               <Waypoint
                 onLeave={this._handleWaypointLeave}
               />
-
             <Col xs={12} style={{margin:'0px',padding:'0px'}}>
+
               <Col xs={7} style={bannerStyleLeft}>
 
                 <ReactFitText compressor={0.6}>
