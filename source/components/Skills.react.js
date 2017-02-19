@@ -3,33 +3,13 @@ import Row from "react-bootstrap/lib/Row"
 import Col from "react-bootstrap/lib/Col"
 import SVGgraph from "./SVGgraph.react.js"
 import Dimensions from 'react-dimensions'
-import { Parallax } from 'react-parallax';
 var ReactFitText = require('react-fittext');
 
-
-
-const textStyle ={
-  width:"100%",
-  height:"auto",
-  textAlight:"right",
-  direction: 'rtl',
-}
-
-const flexed = {
-  display:'inline-flex',
-  backgroundColor:'rgba(250, 250, 250, 0.6)',
-  paddingRight:"50px"
-}
 
 const imgStyle={
   height:"100px",
   margin:"10px",
   maxWidth:"150px",
-}
-
-const textPop ={
-  color:"#389DBE",
-  fontSize:"1.5em"
 }
 
 const bar={
@@ -74,32 +54,10 @@ var Skills = React.createClass({
   render: function() {
     return (
       <div >
-        <Row style={{marginTop:"0px"}}>
-          <div style={textStyle}>
-            <Parallax bgImage="img/bowtie.jpg" strength={100} bgStyle={{minHeight:"110%", minWidth:'100%'}} blur={1}>
 
-              <Col xs={12} style={flexed}>
-                <h4>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>We are creators</span></h4>
-              </Col>
-
-              <Col xs={12} style={flexed}>
-                  <h4>transforming data into insights <br /><span style={textPop}> We are storytellers</span></h4>
-              </Col>
-
-              <Col xs={12} style={flexed}>
-                <h4>building unique data visualization software solutions <br /><span style={textPop}>We are developers</span></h4>
-              </Col>
-
-              <Col xs={12} style={flexed}>
-                  <h4>putting the cookies on the bottom shelf <br /><span style={textPop}>We are rebels and scruffy looking nerf herders</span></h4>
-              </Col>
-
-            </Parallax>
-          </div>
-        </Row>
 
         <Row>
-          <center><h2 style={bar} lgHidden mdHidden>Things we love</h2></center>
+          <center><h2 style={bar} >Things we love</h2></center>
           <Col xs={10} xsOffset={1} lgHidden mdHidden>
           <div>
 

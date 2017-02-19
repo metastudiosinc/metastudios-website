@@ -3,6 +3,7 @@ var Header = require('./Header.react');
 import Banner from "./BannerDynamic.react.js"
 import Skills from "./Skills.react.js"
 import connect from "./connect.react.js"
+import weAre from "./weAre.react.js"
 import footer from "./footer.react.js"
 import Dimensions from 'react-dimensions'
 
@@ -45,6 +46,8 @@ var Application = React.createClass({
           style={{height:"100%"}}/>
 
         {connect()}
+
+        {weAre()}
         <Skills />
 
         {connect()}
