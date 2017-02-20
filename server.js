@@ -7,7 +7,7 @@ var ReactDOMServer = require('react-dom/server');
 var App = require('./source/components/Application.react.js');
 
 //local host only example
-var port = '80';
+var port = '3000';
 
 var server = function() {
 

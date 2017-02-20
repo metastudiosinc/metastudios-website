@@ -23,7 +23,7 @@ const bannerStyleLeft = {
   minHeight:"1800px",
   maxHeight:"2200px",
   paddingTop:"10%",
-  color:"#BEBBBB",
+  color:"#FAFAFA",
   textAlign: 'right'
 }
 
