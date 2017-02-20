@@ -1,6 +1,8 @@
 var React = require('react');
 import Row from "react-bootstrap/lib/Row"
 import Col from "react-bootstrap/lib/Col"
+import {VelocityComponent, VelocityTransitionGroup} from 'velocity-react'
+
 var data =require("../../private/data.json")
 const PHI = 1.618033988749895 // golden ratio
 
@@ -41,7 +43,7 @@ function calcLinks(w,h,data) {
                      "Q " + (from['x']+ xoffset).toString() + " " + (from['y'] + yoffset).toString() +
                      " " + to['x'].toString() + " " + to['y'].toString() );
     return (
-      <path key={idx} d={curvePath} stroke="#024873" fill="transparent" strokeWidth="0.2em" opacity="0.5"/>
+      <path key={idx} d={curvePath} stroke="#FAFAFA" fill="transparent" strokeWidth="0.2em" opacity="0.5"/>
     )
 
   })
@@ -54,7 +56,7 @@ function calcLinks(w,h,data) {
 
 function innerRing(w, h, data) {
   var ring;
-  const ringDist = 120;
+  const ringDist = 80;
   // console.log(w, h, data);
   ring = data.nodes.map(function(val, idx) {
     var angle = (360/data.nodes.length) * idx + 30
@@ -65,12 +67,13 @@ function innerRing(w, h, data) {
     centers[val.id.toString()] = {"x":x, "y":y}
 
     return (
-      <g key={idx}>
-      <ellipse cx={x} cy={y} rx={rad} ry={rad/PHI} fill={val.color} stroke={val.color} strokeWidth={1}/>
-      <text x={x} y={y} dy="0.3em" textAnchor="middle" fill="#FAFAFA" stroke="none" fontSize="2em">
+
+        <g key={idx}>
+          <ellipse cx={x} cy={y} rx={rad} ry={rad/PHI} fill={val.color} stroke={val.color} strokeWidth={1}/>
+        <text x={x} y={y} dy="0.3em" textAnchor="middle" fill="#535485" stroke="none" fontSize="2em">
             {val.text}
-      </text>
-    </g>
+        </text>
+        </g>
 
     )
 
@@ -109,7 +112,7 @@ function middleRing(w,h, data) {
         <text x={x}
               y={y}
               dy="0.3em"
-              textAnchor="middle" fill="#FAFAFA" stroke="none" fontSize="1em">
+              textAnchor="middle" fill="#535485" stroke="none" fontSize="1em">
               {val.text}
         </text>
     </g>
@@ -147,7 +150,7 @@ function outerRing(w,h, data) {
         <text x={x}
               y={y}
               dy="0.2em"
-              textAnchor="middle" fill="#FAFAFA" stroke="none" fontSize=".8em">
+              textAnchor="middle" fill="#535485" stroke="none" fontSize=".8em">
               {val.text}
         </text>
     </g>

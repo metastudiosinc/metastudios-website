@@ -18,12 +18,12 @@ const imgStyle ={
 }
 
 const bannerStyleLeft = {
-  backgroundColor:"#389DBE",
+  backgroundColor:"#535485",
   height:"100%",
   minHeight:"1800px",
   maxHeight:"2200px",
-  paddingTop:"20%",
-  color:"#FAFAFA",
+  paddingTop:"10%",
+  color:"#BEBBBB",
   textAlign: 'right'
 }
 
@@ -32,19 +32,28 @@ const headerStyle ={
   left:0,
   width:"100%",
   height:"70px",
-  backgroundColor:"#389DBE"
+  backgroundColor:"#535485"
+}
+
+const downArrow ={
+  position:"fixed",
+  bottom:"100px",
+  left:"40%",
+  height:"60px",
+  width:"auto",
+  cursor:"pointer",
 }
 
 
 var Banner = React.createClass({
 
-  _handleWaypointEnter:function() {
+  _handleWaypointEnter: function() {
     this.setState({
       fullSize:true
     })
   },
 
-  _handleWaypointLeave:function() {
+  _handleWaypointLeave: function() {
 
     this.setState({
       fullSize:false
@@ -53,7 +62,11 @@ var Banner = React.createClass({
 
   },
 
-
+  arrowClick: function() {
+    this.setState({
+      fullSize:false
+    })
+  },
 
   //default API ----------------
 
@@ -71,11 +84,11 @@ var Banner = React.createClass({
   //
   componentDidMount: function(){
     Events.scrollEvent.register('begin', function(to, element) {
-      console.log("begin", arguments);
+      // console.log("begin", arguments);
     });
 
     Events.scrollEvent.register('end', function(to, element) {
-      console.log("end", arguments);
+      // console.log("end", arguments);
     });
 
     scrollSpy.update();
@@ -109,17 +122,18 @@ var Banner = React.createClass({
 
               <Col xs={7} style={bannerStyleLeft}>
 
-                <ReactFitText compressor={0.6}>
+                <ReactFitText compressor={0.6} maxFontSize={60}>
                   <h2>Explore.</h2>
                 </ReactFitText>
-                <ReactFitText compressor={0.6}>
+                <ReactFitText compressor={0.6} maxFontSize={60}>
                   <h2>Transform.</h2>
                 </ReactFitText>
-                <ReactFitText compressor={0.6}>
+                <ReactFitText compressor={0.6} maxFontSize={60}>
                   <h2>Be Epic.</h2>
                 </ReactFitText>
 
 
+                <img src="img/down-arrow.png" style={downArrow} alt="scroll for more" onClick={this.arrowClick} />
 
 
               </Col>
@@ -130,7 +144,7 @@ var Banner = React.createClass({
             : undefined}
         </VelocityTransitionGroup>
 
-        <VelocityTransitionGroup enter={{animation: "slideDown", duration:1500, delay:500}} leave={{animation: "slideUp"}}>
+        <VelocityTransitionGroup enter={{animation: "slideDown", duration:1500}} leave={{animation: "slideUp"}}>
           {!this.state.fullSize ?
 
 
