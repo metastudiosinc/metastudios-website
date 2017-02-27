@@ -5,11 +5,8 @@ import { Parallax } from 'react-parallax';
 
 const flexed = {
   backgroundColor:'#FAFAFA',
-  paddingRight:"50px",
   height:"inherit",
   paddingRight:"70px",
-  paddingTop:"10%"
-
 }
 
 const textStyle ={
@@ -18,12 +15,12 @@ const textStyle ={
   minHeight:"400px",
   textAlight:"right",
   direction: 'rtl',
-  color:"#7f7d87"
+  color:"#7f7d87",
 }
 
 const textPop ={
   color:"#27264f",
-  fontSize:"1.5em",
+  fontSize:"1.3em",
 }
 
 const screenStyle ={
@@ -49,23 +46,23 @@ const weAre = () => (
 
       <Col xs={12} sm={12} md={6} className="pull-right" style={flexed}>
 
-        <h2 style={{color:"#edb528", fontWeight:"heavy"}}>...We are</h2>
+        <h2 style={{color:"#edb528", fontWeight:"heavy",fontSize:"2.5em"}}>...We are</h2>
 
 
       <Row >
-        <h4>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>creators</span></h4>
+        <h4 style={{  fontSize:"1.8em"}}>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>creators</span></h4>
       </Row>
 
       <Row >
-          <h4>transforming data into insights <br /><span style={textPop}> storytellers</span></h4>
+          <h4 style={{  fontSize:"1.8em"}}>transforming data into insights <br /><span style={textPop}> storytellers</span></h4>
       </Row>
 
       <Row>
-        <h4>building unique data visualization software solutions <br /><span style={textPop}>developers</span></h4>
+        <h4 style={{  fontSize:"1.8em"}}>building unique data visualization software solutions <br /><span style={textPop}>developers</span></h4>
       </Row>
 
       <Row>
-          <h4>putting the cookies on the bottom shelf <br /><span style={textPop}>rebels and scruffy looking nerf herders</span></h4>
+          <h4 style={{  fontSize:"1.8em"}}>putting the cookies on the bottom shelf <br /><span style={textPop}>rebels and scruffy looking nerf herders</span></h4>
       </Row>
 
     </Col>

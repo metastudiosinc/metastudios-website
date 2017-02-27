@@ -15,12 +15,12 @@ const flexed = {
   paddingRight:"50px",
   height:"inherit",
   padding:"50px",
-  color:"#7f7d87"
+  color:"#7f7d87",
 }
 
 const textPop ={
   color:"#27264f",
-  fontSize:"1.5em",
+  fontSize:"1.3em",
 }
 
 const screenStyle ={
@@ -42,7 +42,7 @@ const connect = () => (
 
       <Row >
         <Col xs={12}>
-          <h4 ><span style={textPop}>Professional Services</span><br />
+          <h4 style={{  fontSize:"1.8em"}}><span style={textPop}>Professional Services</span><br />
         providing full time onsight support for Software Development and User Experience support on federal contract
       </h4>
         </Col>
@@ -50,7 +50,7 @@ const connect = () => (
 
       <Row >
         <Col xs={12}>
-          <h4><span style={textPop}>Your True Tribes</span><br />
+          <h4 style={{  fontSize:"1.8em"}}><span style={textPop}>Your True Tribes</span><br />
         epic brand coaching and nerdy wisdom
         <a href="http://yourtruetribes.com" style={{color:'#edb528'}}> <br /> learn more </a></h4>
       </Col>
@@ -59,7 +59,7 @@ const connect = () => (
 
       <Row>
         <Col xs={12}>
-          <h4><span style={textPop}>Technical Instruction</span><br />
+          <h4 style={{  fontSize:"1.8em"}}><span style={textPop}>Technical Instruction</span><br />
         "Think..." series of courses on Node.js, React, Python, and Spark
         <a style={{color:'#edb528'}}> <br /> see the current offerings </a></h4>
       </Col>
@@ -68,7 +68,7 @@ const connect = () => (
 
       <Row>
         <Col xs={12}>
-          <h4><span style={textPop}>Product Reseach and Design</span><br />
+          <h4 style={{  fontSize:"1.8em"}}><span style={textPop}>Product Reseach and Design</span><br />
         filling the gaps most dont even see</h4>
       </Col>
 
