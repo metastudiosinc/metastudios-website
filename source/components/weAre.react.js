@@ -6,7 +6,8 @@ import { Parallax } from 'react-parallax';
 const flexed = {
   backgroundColor:'#FAFAFA',
   height:"inherit",
-  padding:"70px",
+  paddingRight:"70px",
+  paddingLeft:"40px",
 }
 
 const textStyle ={
