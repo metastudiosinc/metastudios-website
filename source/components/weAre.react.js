@@ -42,12 +42,12 @@ const weAre = () => (
   <Row style={{marginTop:"0px"}}>
   <div style={textStyle}>
     <Parallax  bgImage="img/desk.jpg" strength={300} >
-      <Col  md={6} smHidden xsHidden className="pull-left" style={screenStyle}>
+      <Col  md={6} smHidden xsHidden  className="pull-left" style={screenStyle}>
         <img src="img/PieFilter.png" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}}/>
 
       </Col>
 
-      <Col xs={12} sm={7} md={6} className="pull-right" style={flexed}>
+      <Col xs={12} sm={12} md={6} className="pull-right" style={flexed}>
 
         <h2 style={{color:"#edb528", fontWeight:"heavy"}}>...We are</h2>
 
@@ -79,7 +79,7 @@ const weAre = () => (
 
 </Row>
 <Row>
-  <Col xs={12} smHidden mdHidden lgHidden >
+  <Col xs={12}  mdHidden lgHidden >
     <img src="/img/akbarMobile.jpg" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}} />
   </Col>
 </Row>

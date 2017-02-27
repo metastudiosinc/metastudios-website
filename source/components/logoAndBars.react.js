@@ -37,7 +37,7 @@ const connect = () => (
 
     </Col>
 
-    <Col xs={12} sm={7} md={6} className="pull-left" style={flexed}>
+    <Col xs={12} sm={12} md={6} className="pull-left" style={flexed}>
       <h2 style={{color:"#edb528", fontWeight:"heavy"}}>Our divisions</h2>
 
       <Row >
