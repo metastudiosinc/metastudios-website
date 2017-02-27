@@ -80,7 +80,7 @@ const weAre = () => (
 </Row>
 <Row>
   <Col xs={12}  mdHidden lgHidden >
-    <img src="/img/akbarMobile.jpg" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}} />
+    <img src="/img/AkbarMobile.jpg" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}} />
   </Col>
 </Row>
 
