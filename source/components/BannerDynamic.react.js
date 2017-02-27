@@ -38,7 +38,7 @@ const headerStyle ={
 const downArrow ={
   position:"fixed",
   bottom:"100px",
-  left:"40%",
+  left:"10%",
   height:"60px",
   width:"auto",
   cursor:"pointer",

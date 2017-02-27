@@ -46,8 +46,8 @@ var Application = React.createClass({
           containerHeight={this.props.containerHeight}
           style={{height:"100%"}}/>
 
-        {weAre()}
-        {logo()}
+        {weAre(this.props.containerWidth)}
+        {logo(this.props.containerWidth)}
 
         {connect()}
 

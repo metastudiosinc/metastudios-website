@@ -6,7 +6,7 @@ import { Parallax } from 'react-parallax';
 const flexed = {
   backgroundColor:'#FAFAFA',
   height:"inherit",
-  paddingRight:"70px",
+  padding:"70px",
 }
 
 const textStyle ={
@@ -33,8 +33,32 @@ const smallScreenStyle ={
   padding:"0px",
 }
 
+const smallHeader ={
 
-const weAre = () => (
+  color:"#edb528",
+  fontWeight:"heavy",
+  fontSize:"2.5em",
+
+}
+
+const largeHeader ={
+
+  color:"#edb528",
+  fontWeight:"heavy",
+  fontSize:"3.5em",
+
+}
+
+const smallContent={
+  fontSize:"1.8em"
+}
+
+const largeContent={
+  fontSize:"2.8em"
+}
+
+
+const weAre = (containerWidth) => (
   <div>
   <Row style={{marginTop:"0px"}}>
   <div style={textStyle}>
@@ -46,24 +70,25 @@ const weAre = () => (
 
       <Col xs={12} sm={12} md={6} className="pull-right" style={flexed}>
 
-        <h2 style={{color:"#edb528", fontWeight:"heavy",fontSize:"2.5em"}}>...We are</h2>
+        <h2 style={containerWidth<= 992 ? largeHeader : smallHeader}>...We are</h2>
 
 
       <Row >
-        <h4 style={{  fontSize:"1.8em"}}>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>creators</span></h4>
+        <h4 style={containerWidth<= 992 ? largeContent: smallContent}>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>creators</span></h4>
       </Row>
 
       <Row >
-          <h4 style={{  fontSize:"1.8em"}}>transforming data into insights <br /><span style={textPop}> storytellers</span></h4>
+          <h4 style={containerWidth<= 992 ? largeContent: smallContent}>transforming data into insights <br /><span style={textPop}> storytellers</span></h4>
       </Row>
 
       <Row>
-        <h4 style={{  fontSize:"1.8em"}}>building unique data visualization software solutions <br /><span style={textPop}>developers</span></h4>
+        <h4 style={containerWidth<= 992 ? largeContent: smallContent}>building unique data visualization software solutions <br /><span style={textPop}>developers</span></h4>
       </Row>
 
       <Row>
-          <h4 style={{  fontSize:"1.8em"}}>putting the cookies on the bottom shelf <br /><span style={textPop}>rebels and scruffy looking nerf herders</span></h4>
+          <h4 style={containerWidth<= 992 ? largeContent: smallContent}>putting the cookies on the bottom shelf <br /><span style={textPop}>rebels and scruffy looking nerf herders</span></h4>
       </Row>
+
 
     </Col>
 
