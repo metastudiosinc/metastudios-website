@@ -7,7 +7,9 @@ const flexed = {
   backgroundColor:'#FAFAFA',
   paddingRight:"50px",
   height:"inherit",
-  paddingTop:"15%"
+  paddingRight:"70px",
+  paddingTop:"10%"
+
 }
 
 const textStyle ={
@@ -16,10 +18,11 @@ const textStyle ={
   minHeight:"400px",
   textAlight:"right",
   direction: 'rtl',
+  color:"#7f7d87"
 }
 
 const textPop ={
-  color:"#535485",
+  color:"#27264f",
   fontSize:"1.5em",
 }
 
@@ -35,9 +38,10 @@ const smallScreenStyle ={
 
 
 const weAre = () => (
+  <div>
   <Row style={{marginTop:"0px"}}>
   <div style={textStyle}>
-    <Parallax  bgImage="img/desk.jpg" strength={300} bgStyle={{minHeight:"600px"}}>
+    <Parallax  bgImage="img/desk.jpg" strength={300} >
       <Col  md={6} smHidden xsHidden className="pull-left" style={screenStyle}>
         <img src="img/PieFilter.png" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}}/>
 
@@ -45,27 +49,43 @@ const weAre = () => (
 
       <Col xs={12} sm={7} md={6} className="pull-right" style={flexed}>
 
+        <h2 style={{color:"#edb528", fontWeight:"heavy"}}>...We are</h2>
+
+
       <Row >
-        <h4>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>We are creators</span></h4>
+        <h4>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>creators</span></h4>
       </Row>
 
       <Row >
-          <h4>transforming data into insights <br /><span style={textPop}> We are storytellers</span></h4>
+          <h4>transforming data into insights <br /><span style={textPop}> storytellers</span></h4>
       </Row>
 
       <Row>
-        <h4>building unique data visualization software solutions <br /><span style={textPop}>We are developers</span></h4>
+        <h4>building unique data visualization software solutions <br /><span style={textPop}>developers</span></h4>
       </Row>
 
       <Row>
-          <h4>putting the cookies on the bottom shelf <br /><span style={textPop}>We are rebels and scruffy looking nerf herders</span></h4>
+          <h4>putting the cookies on the bottom shelf <br /><span style={textPop}>rebels and scruffy looking nerf herders</span></h4>
       </Row>
 
     </Col>
 
+
+
     </Parallax>
   </div>
+
+
+
 </Row>
+<Row>
+  <Col xs={12} smHidden mdHidden lgHidden >
+    <img src="/img/akbarMobile.jpg" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}} />
+  </Col>
+</Row>
+
+
+</div>
 );
 
 export default weAre;

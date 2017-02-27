@@ -70,7 +70,7 @@ function innerRing(w, h, data) {
 
         <g key={idx}>
           <ellipse cx={x} cy={y} rx={rad} ry={rad/PHI} fill={val.color} stroke={val.color} strokeWidth={1}/>
-        <text x={x} y={y} dy="0.3em" textAnchor="middle" fill="#535485" stroke="none" fontSize="2em">
+        <text x={x} y={y} dy="0.3em" textAnchor="middle" fill="#27264f" stroke="none" fontSize="2em">
             {val.text}
         </text>
         </g>
@@ -112,7 +112,7 @@ function middleRing(w,h, data) {
         <text x={x}
               y={y}
               dy="0.3em"
-              textAnchor="middle" fill="#535485" stroke="none" fontSize="1em">
+              textAnchor="middle" fill="#27264f" stroke="none" fontSize="1em">
               {val.text}
         </text>
     </g>
@@ -150,7 +150,7 @@ function outerRing(w,h, data) {
         <text x={x}
               y={y}
               dy="0.2em"
-              textAnchor="middle" fill="#535485" stroke="none" fontSize=".8em">
+              textAnchor="middle" fill="#27264f" stroke="none" fontSize=".8em">
               {val.text}
         </text>
     </g>

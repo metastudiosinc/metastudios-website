@@ -15,6 +15,16 @@ const skills = (containerWidth, containerHeight) => (
           containerHeight={containerHeight * .7}
         />
     </Col>
+
+    <Col md={12} lgHidden mdHidden style={{minHeight:'250px'}}>
+
+      <h2 style={{color:"#FAFAFA", fontSize:"4em"}}>
+        <center>
+          Strategy<br />Design<br />Code<br />
+        </center>
+      </h2>
+
+    </Col>
   </Parallax>
   </Row>
 );

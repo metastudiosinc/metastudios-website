@@ -18,7 +18,7 @@ const imgStyle ={
 }
 
 const bannerStyleLeft = {
-  backgroundColor:"#535485",
+  backgroundColor:"#27264f",
   height:"100%",
   minHeight:"1800px",
   maxHeight:"2200px",
@@ -32,7 +32,7 @@ const headerStyle ={
   left:0,
   width:"100%",
   height:"70px",
-  backgroundColor:"#535485"
+  backgroundColor:"#27264f"
 }
 
 const downArrow ={

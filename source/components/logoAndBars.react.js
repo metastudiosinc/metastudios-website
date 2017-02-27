@@ -14,11 +14,12 @@ const flexed = {
   backgroundColor:'rgba(250, 250, 250, 1)',
   paddingRight:"50px",
   height:"inherit",
-  padding:"32px"
+  padding:"50px",
+  color:"#7f7d87"
 }
 
 const textPop ={
-  color:"#389DBE",
+  color:"#27264f",
   fontSize:"1.5em",
 }
 
@@ -30,28 +31,47 @@ const screenStyle ={
 const connect = () => (
 
   <Row style={{marginBottom:"20px", height:"auto"}}>
-    <Parallax  bgImage="img/desk2.jpeg" strength={300} bgStyle={{minHeight:"600px"}}>
+    <Parallax  bgImage="img/desk2.jpeg" strength={300} >
     <Col  md={6} smHidden xsHidden className="pull-right" style={screenStyle}>
       <img src="img/BarFilter.png" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}}/>
 
     </Col>
 
     <Col xs={12} sm={7} md={6} className="pull-left" style={flexed}>
+      <h2 style={{color:"#edb528", fontWeight:"heavy"}}>Our divisions</h2>
 
       <Row >
-        <h4>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>We are creators</span></h4>
+        <Col xs={12}>
+          <h4 ><span style={textPop}>Professional Services</span><br />
+        providing full time onsight support for Software Development and User Experience support on federal contract
+      </h4>
+        </Col>
       </Row>
 
       <Row >
-          <h4>transforming data into insights <br /><span style={textPop}> We are storytellers</span></h4>
+        <Col xs={12}>
+          <h4><span style={textPop}>Your True Tribes</span><br />
+        epic brand coaching and nerdy wisdom
+        <a href="http://yourtruetribes.com" style={{color:'#edb528'}}> <br /> learn more </a></h4>
+      </Col>
+
       </Row>
 
       <Row>
-        <h4>building unique data visualization software solutions <br /><span style={textPop}>We are developers</span></h4>
+        <Col xs={12}>
+          <h4><span style={textPop}>Technical Instruction</span><br />
+        "Think..." series of courses on Node.js, React, Python, and Spark
+        <a style={{color:'#edb528'}}> <br /> see the current offerings </a></h4>
+      </Col>
+
       </Row>
 
       <Row>
-          <h4>putting the cookies on the bottom shelf <br /><span style={textPop}>We are rebels and scruffy looking nerf herders</span></h4>
+        <Col xs={12}>
+          <h4><span style={textPop}>Product Reseach and Design</span><br />
+        filling the gaps most dont even see</h4>
+      </Col>
+
       </Row>
 
 

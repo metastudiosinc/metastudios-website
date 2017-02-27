@@ -4,24 +4,20 @@ import Col from "react-bootstrap/lib/Col"
 import { Parallax } from 'react-parallax';
 
 const imgStyle={
-  height:"60px",
+  height:"90px",
   margin:"10px"
 }
 
-const bar={
-  width:"100%",
-  height:"auto",
-  backgroundColor:"#024873",
-  color:"#FAFAFA",
-  marginBottom:"0px",
-  padding:"10px"
+const padded={
+  paddingTop:"40px",
+  paddingBottom:"40px",
 }
 
 
 const connect = () => (
 
   <Row style={{marginBottom:"20px", height:"auto"}}>
-    <Col xs={10} xsOffset={1}>
+    <Col xs={10} xsOffset={1} style={padded}>
       <Col md={3} xs={6}><center><img style={imgStyle} src="/img/facebook.png" /></center></Col>
       <Col md={3} xs={6}><center><img style={imgStyle} src="/img/twitter.png" /></center></Col>
       <Col md={3} xs={6}><center><img style={imgStyle} src="/img/linkedin.png" /></center></Col>
