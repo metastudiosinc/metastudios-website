@@ -7,9 +7,9 @@ import { Parallax } from 'react-parallax';
 
 const skills = (containerWidth, containerHeight) => (
   <Row>
-    <Parallax  bgImage="img/gree.jpg" strength={300} bgStyle={{minHeight:containerHeight}}>
+    <Parallax  bgImage="img/graph.jpg" strength={300} bgStyle={{minHeight:containerHeight}}>
 
-    <Col md={12} smHidden xsHidden style={{paddingBottom:"30%", paddingRight:"25%"}}>
+    <Col md={12} smHidden xsHidden style={{paddingTop:"13%", paddingLeft:"15%", paddingBottom:'10%'}}>
       <SVGgraph
           containerWidth={containerWidth * .7}
           containerHeight={containerHeight * .7}

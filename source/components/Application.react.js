@@ -2,7 +2,8 @@ var React = require('react');
 var Header = require('./Header.react');
 import Banner from "./BannerDynamic.react.js"
 import skills from "./skills.react.js"
-import connect from "./connect2.react.js"
+import connect from "./connect.react.js"
+import logo from "./logoAndBars.react.js"
 import weAre from "./weAre.react.js"
 import footer from "./footer.react.js"
 import Dimensions from 'react-dimensions'
@@ -46,6 +47,7 @@ var Application = React.createClass({
           style={{height:"100%"}}/>
 
         {weAre()}
+        {logo()}
 
         {connect()}
 
