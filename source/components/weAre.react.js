@@ -64,10 +64,10 @@ const weAre = (containerWidth) => (
   <div>
   <Row style={{marginTop:"0px"}}>
   <div style={textStyle}>
-    <Parallax  bgImage="img/desk.jpg" strength={300} bgStyle={{paddingTop:"20px"}}>
+    <Parallax  bgImage="img/desk.jpg" strength={300} bgHeight="650px" bgWidth="auto">
       <Col  md={6} smHidden xsHidden  className="pull-left" style={screenStyle}>
-        <img src="img/pieFilter.png" style={{height:"auto",  minHeight:"90%", width:"100%"}}/>
-        <div style={{height:"100px", width:"100%", backgroundColor:"#FAFAFA"}}><br /><br /></div>
+        <img src="img/pieFilter.png" style={{height:"auto",  minHeight:"90%", maxHeight:"800px", width:"100%"}}/>
+        <div style={{height:"125px", width:"100%", backgroundColor:"#FAFAFA"}}><br /><br /></div>
 
       </Col>
 
