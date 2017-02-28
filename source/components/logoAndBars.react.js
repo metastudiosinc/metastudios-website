@@ -54,7 +54,7 @@ const largeContent={
 const connect = (containerWidth) => (
 
   <Row style={{marginBottom:"20px", height:"auto"}}>
-    <Parallax  bgImage="img/desk2.jpeg" strength={300} >
+    <Parallax  bgImage="img/desk2.jpg" strength={300} >
     <Col  md={6} smHidden xsHidden className="pull-right" style={screenStyle}>
       <img src="img/BarFilter.png" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}}/>
 
