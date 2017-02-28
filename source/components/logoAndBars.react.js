@@ -48,7 +48,7 @@ const smallContent={
 }
 
 const largeContent={
-  fontSize:"2.8em"
+  fontSize:"3em"
 }
 
 const connect = (containerWidth) => (

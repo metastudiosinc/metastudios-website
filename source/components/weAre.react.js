@@ -5,15 +5,16 @@ import { Parallax } from 'react-parallax';
 
 const flexed = {
   backgroundColor:'#FAFAFA',
-  height:"inherit",
+  height:"100%",
+  paddingTop:"70px",
   paddingRight:"70px",
   paddingLeft:"40px",
+  paddingBottom:"70px"
 }
 
 const textStyle ={
   width:"100%",
   height:"auto",
-  minHeight:"400px",
   textAlight:"right",
   direction: 'rtl',
   color:"#7f7d87",
@@ -55,7 +56,7 @@ const smallContent={
 }
 
 const largeContent={
-  fontSize:"2.8em"
+  fontSize:"3em"
 }
 
 
@@ -63,9 +64,10 @@ const weAre = (containerWidth) => (
   <div>
   <Row style={{marginTop:"0px"}}>
   <div style={textStyle}>
-    <Parallax  bgImage="img/desk.jpg" strength={300} >
+    <Parallax  bgImage="img/desk.jpg" strength={300} bgStyle={{paddingTop:"20px"}}>
       <Col  md={6} smHidden xsHidden  className="pull-left" style={screenStyle}>
-        <img src="img/PieFilter.png" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}}/>
+        <img src="img/pieFilter.png" style={{height:"auto",  minHeight:"90%", width:"100%"}}/>
+        <div style={{height:"100px", width:"100%", backgroundColor:"#FAFAFA"}}><br /><br /></div>
 
       </Col>
 
