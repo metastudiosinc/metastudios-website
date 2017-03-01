@@ -105,7 +105,7 @@ const weAre = (containerWidth) => (
 </Row>
 <Row>
   <Col xs={12}  mdHidden lgHidden >
-    <img src="/img/AkbarMobile.jpg" style={{minHeight:"inherit",height:"inherit",  minWidth:"100%"}} />
+    <img src="/img/AkbarMobile.jpg" style={{width:"100%", height:"auto"}} />
   </Col>
 </Row>
 
