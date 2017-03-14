@@ -14,7 +14,7 @@ var scrollSpy  = Scroll.scrollSpy;
 
 
 const imgStyle ={
-  width:'100%',
+    height:"40px",
 }
 
 const bannerStyleLeft = {
@@ -37,11 +37,10 @@ const headerStyle ={
 
 const downArrow ={
   position:"fixed",
-  bottom:"100px",
+  bottom:"30px",
   left:"10%",
-  height:"60px",
+  fontSize:"30px",
   width:"auto",
-  cursor:"pointer",
 }
 
 
@@ -132,8 +131,7 @@ var Banner = React.createClass({
                   <h2>Be Epic.</h2>
                 </ReactFitText>
 
-
-                <img src="img/down-arrow.png" style={downArrow} alt="scroll for more" onClick={this.arrowClick} />
+                <div style={downArrow}><p>&darr;</p></div>
 
 
               </Col>
