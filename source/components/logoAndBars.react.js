@@ -92,7 +92,7 @@ const connect = (containerWidth) => (
       <Row>
         <Col xs={12}>
           <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>Product Reseach and Design</span><br />
-        filling the gaps most dont even see</h4>
+        filling the gaps most don&#39;t even see</h4>
       </Col>
 
       </Row>
