@@ -71,25 +71,35 @@ const weAre = (containerWidth) => (
 
       <Col xs={12} sm={12} md={6} style={flexed}>
         <Row >
+          <Col xs={12}>
         <h2 style={containerWidth<= 992 ? largeHeader : smallHeader}>We are...</h2>
+        </Col>
       </Row>
 
       <Row >
+        <Col xs={12}>
         <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>creators</span><br />combining new tech, clever strategy, + intuitive UI</h4>
+        </Col>
       </Row>
 
       <Row >
+        <Col xs={12}>
           <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}> storytellers</span><br />transforming data into insights </h4>
+          </Col>
       </Row>
 
       <Row>
+        <Col xs={12}>
         <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>developers</span><br />building unique data visualization software solutions</h4>
+        </Col>
       </Row>
 
       <Row>
+        <Col xs={12}>
           <h4 style={containerWidth<= 992 ? largeContent: smallContent}>
               <span style={textPop}>rebels and scruffy looking nerf herders</span><br />
               putting the cookies on the bottom shelf </h4>
+          </Col>
       </Row>
 
 
