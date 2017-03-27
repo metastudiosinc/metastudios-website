@@ -15,8 +15,6 @@ const flexed = {
 const textStyle ={
   width:"100%",
   height:"auto",
-  textAlight:"right",
-  direction: 'rtl',
   color:"#7f7d87",
 }
 
@@ -71,25 +69,27 @@ const weAre = (containerWidth) => (
 
       </Col>
 
-      <Col xs={12} sm={12} md={6} className="pull-right" style={flexed}>
-
-        <h2 style={containerWidth<= 992 ? largeHeader : smallHeader}>...We are</h2>
-
-
-      <Row >
-        <h4 style={containerWidth<= 992 ? largeContent: smallContent}>combining new tech, clever strategy, and intuitive UI <br /> <span style={textPop}>creators</span></h4>
+      <Col xs={12} sm={12} md={6} style={flexed}>
+        <Row >
+        <h2 style={containerWidth<= 992 ? largeHeader : smallHeader}>We are...</h2>
       </Row>
 
       <Row >
-          <h4 style={containerWidth<= 992 ? largeContent: smallContent}>transforming data into insights <br /><span style={textPop}> storytellers</span></h4>
+        <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>creators</span><br />combining new tech, clever strategy, + intuitive UI</h4>
+      </Row>
+
+      <Row >
+          <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}> storytellers</span><br />transforming data into insights </h4>
       </Row>
 
       <Row>
-        <h4 style={containerWidth<= 992 ? largeContent: smallContent}>building unique data visualization software solutions <br /><span style={textPop}>developers</span></h4>
+        <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>developers</span><br />building unique data visualization software solutions</h4>
       </Row>
 
       <Row>
-          <h4 style={containerWidth<= 992 ? largeContent: smallContent}>putting the cookies on the bottom shelf <br /><span style={textPop}>rebels and scruffy looking nerf herders</span></h4>
+          <h4 style={containerWidth<= 992 ? largeContent: smallContent}>
+              <span style={textPop}>rebels and scruffy looking nerf herders</span><br />
+              putting the cookies on the bottom shelf </h4>
       </Row>
 
 

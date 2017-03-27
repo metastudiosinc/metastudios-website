@@ -66,16 +66,16 @@ const connect = (containerWidth) => (
       <Row >
         <Col xs={12}>
           <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>Professional Services</span><br />
-        providing full time onsite support for Software Development and User Experience
+        providing full time on site support for Software Development + User Experience
       </h4>
         </Col>
       </Row>
 
       <Row >
         <Col xs={12}>
-          <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>Your True Tribes</span><br />
-        epic brand coaching and nerdy wisdom
-        <a href="http://yourtruetribes.com" style={{color:'#edb528'}}> <br /> learn more </a></h4>
+          <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>Brand Hacking + Design Thinking</span><br />
+        epic brand coaching + nerdy wisdom through workshops
+        <a href="http://yourtruetribes.com" style={{color:'#edb528'}}> <br /> check out Your True Tribes </a></h4>
       </Col>
 
       </Row>
@@ -83,16 +83,17 @@ const connect = (containerWidth) => (
       <Row>
         <Col xs={12}>
           <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>Technical Instruction</span><br />
-        series of "Think" courses on Node.js, React, Python, and Spark
-        <a href="https://metastudiosinc.ticketleap.com/" style={{color:'#edb528'}}> <br /> see the current offerings </a></h4>
+        series of courses on node.js, react, python, + spark
+        <a href="https://metastudiosinc.ticketleap.com/" style={{color:'#edb528'}}> <br /> explore the THINK workshops </a></h4>
       </Col>
 
       </Row>
 
       <Row>
         <Col xs={12}>
-          <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>Product Reseach and Design</span><br />
-        filling the gaps most don&#39;t even see</h4>
+          <h4 style={containerWidth<= 992 ? largeContent: smallContent}><span style={textPop}>Product Research + Design</span><br />
+            filling the gaps most don&#39;t even see + discovering new solutions
+          </h4>
       </Col>
 
       </Row>
